@@ -1,0 +1,1193 @@
+{
+  "batch": "batch02",
+  "assets": {
+    "fish": [
+      {
+        "path": "fish/png/fish_batch02_001.png",
+        "width": 114,
+        "height": 97,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_002.png",
+        "width": 120,
+        "height": 92,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_003.png",
+        "width": 108,
+        "height": 119,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_004.png",
+        "width": 120,
+        "height": 75,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_005.png",
+        "width": 117,
+        "height": 92,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_006.png",
+        "width": 123,
+        "height": 103,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_007.png",
+        "width": 109,
+        "height": 66,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_008.png",
+        "width": 110,
+        "height": 92,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_009.png",
+        "width": 123,
+        "height": 112,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_010.png",
+        "width": 127,
+        "height": 39,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_011.png",
+        "width": 114,
+        "height": 77,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_012.png",
+        "width": 114,
+        "height": 95,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_013.png",
+        "width": 124,
+        "height": 78,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_014.png",
+        "width": 116,
+        "height": 88,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_015.png",
+        "width": 113,
+        "height": 81,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_016.png",
+        "width": 107,
+        "height": 71,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_017.png",
+        "width": 111,
+        "height": 85,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_018.png",
+        "width": 109,
+        "height": 85,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_019.png",
+        "width": 92,
+        "height": 80,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_020.png",
+        "width": 124,
+        "height": 64,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_021.png",
+        "width": 115,
+        "height": 89,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_022.png",
+        "width": 98,
+        "height": 71,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_023.png",
+        "width": 103,
+        "height": 61,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_024.png",
+        "width": 114,
+        "height": 66,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_025.png",
+        "width": 113,
+        "height": 84,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_026.png",
+        "width": 113,
+        "height": 82,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_027.png",
+        "width": 113,
+        "height": 77,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_028.png",
+        "width": 117,
+        "height": 65,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_029.png",
+        "width": 119,
+        "height": 41,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_030.png",
+        "width": 123,
+        "height": 87,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_031.png",
+        "width": 117,
+        "height": 127,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_032.png",
+        "width": 95,
+        "height": 123,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_033.png",
+        "width": 130,
+        "height": 102,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_034.png",
+        "width": 120,
+        "height": 114,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_035.png",
+        "width": 92,
+        "height": 87,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_036.png",
+        "width": 107,
+        "height": 128,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_037.png",
+        "width": 90,
+        "height": 83,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_038.png",
+        "width": 117,
+        "height": 116,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_039.png",
+        "width": 112,
+        "height": 113,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_040.png",
+        "width": 118,
+        "height": 129,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_041.png",
+        "width": 100,
+        "height": 106,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_042.png",
+        "width": 111,
+        "height": 100,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_043.png",
+        "width": 103,
+        "height": 92,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_044.png",
+        "width": 111,
+        "height": 87,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_045.png",
+        "width": 107,
+        "height": 74,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_046.png",
+        "width": 114,
+        "height": 90,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_047.png",
+        "width": 141,
+        "height": 29,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_048.png",
+        "width": 95,
+        "height": 86,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_049.png",
+        "width": 109,
+        "height": 81,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_050.png",
+        "width": 130,
+        "height": 74,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_051.png",
+        "width": 119,
+        "height": 101,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_052.png",
+        "width": 127,
+        "height": 107,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_053.png",
+        "width": 114,
+        "height": 113,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_054.png",
+        "width": 126,
+        "height": 124,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_055.png",
+        "width": 122,
+        "height": 96,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_056.png",
+        "width": 264,
+        "height": 116,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_057.png",
+        "width": 104,
+        "height": 97,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_058.png",
+        "width": 117,
+        "height": 102,
+        "source_sheet": "batch02_fish.png"
+      },
+      {
+        "path": "fish/png/fish_batch02_059.png",
+        "width": 114,
+        "height": 89,
+        "source_sheet": "batch02_fish.png"
+      }
+    ],
+    "aquarium": [
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_001.png",
+        "width": 253,
+        "height": 406,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_002.png",
+        "width": 247,
+        "height": 406,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_003.png",
+        "width": 249,
+        "height": 405,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_004.png",
+        "width": 244,
+        "height": 396,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_005.png",
+        "width": 196,
+        "height": 451,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_006.png",
+        "width": 301,
+        "height": 309,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_007.png",
+        "width": 252,
+        "height": 251,
+        "source_sheet": "batch02_aquarium.png"
+      },
+      {
+        "path": "aquarium/tanks/merged_empty/aquarium_batch02_008.png",
+        "width": 406,
+        "height": 278,
+        "source_sheet": "batch02_aquarium.png"
+      }
+    ],
+    "backgrounds": [
+      {
+        "path": "aquarium/backgrounds/bg_batch02_morning_mint.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_coral_sunset.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_navy_moon.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_rainy_gray.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_cream_diary.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_pastel_bubbles.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_sea_grid.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      },
+      {
+        "path": "aquarium/backgrounds/bg_batch02_winter_pearl.png",
+        "width": 364,
+        "height": 492,
+        "source_sheet": "batch02_backgrounds.png"
+      }
+    ],
+    "decorations": [
+      {
+        "path": "decorations/decor_batch02_001.png",
+        "width": 92,
+        "height": 137,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_002.png",
+        "width": 94,
+        "height": 148,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_003.png",
+        "width": 102,
+        "height": 146,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_004.png",
+        "width": 99,
+        "height": 147,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_005.png",
+        "width": 133,
+        "height": 144,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_006.png",
+        "width": 132,
+        "height": 143,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_007.png",
+        "width": 118,
+        "height": 114,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_008.png",
+        "width": 92,
+        "height": 114,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_009.png",
+        "width": 126,
+        "height": 113,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_010.png",
+        "width": 119,
+        "height": 92,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_011.png",
+        "width": 101,
+        "height": 100,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_012.png",
+        "width": 81,
+        "height": 92,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_013.png",
+        "width": 57,
+        "height": 90,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_014.png",
+        "width": 91,
+        "height": 91,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_015.png",
+        "width": 114,
+        "height": 100,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_016.png",
+        "width": 49,
+        "height": 82,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_017.png",
+        "width": 44,
+        "height": 69,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_018.png",
+        "width": 70,
+        "height": 68,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_019.png",
+        "width": 158,
+        "height": 102,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_020.png",
+        "width": 114,
+        "height": 75,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_021.png",
+        "width": 126,
+        "height": 92,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_022.png",
+        "width": 106,
+        "height": 89,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_023.png",
+        "width": 107,
+        "height": 102,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_024.png",
+        "width": 121,
+        "height": 97,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_025.png",
+        "width": 121,
+        "height": 103,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_026.png",
+        "width": 30,
+        "height": 30,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_027.png",
+        "width": 116,
+        "height": 111,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_028.png",
+        "width": 57,
+        "height": 65,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_029.png",
+        "width": 41,
+        "height": 41,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_030.png",
+        "width": 133,
+        "height": 92,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_031.png",
+        "width": 113,
+        "height": 109,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_032.png",
+        "width": 131,
+        "height": 113,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_033.png",
+        "width": 39,
+        "height": 42,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_034.png",
+        "width": 33,
+        "height": 31,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_035.png",
+        "width": 120,
+        "height": 115,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_036.png",
+        "width": 124,
+        "height": 104,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_037.png",
+        "width": 121,
+        "height": 100,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_038.png",
+        "width": 117,
+        "height": 85,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_039.png",
+        "width": 119,
+        "height": 113,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_040.png",
+        "width": 147,
+        "height": 106,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_041.png",
+        "width": 116,
+        "height": 129,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_042.png",
+        "width": 126,
+        "height": 133,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_043.png",
+        "width": 132,
+        "height": 116,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_044.png",
+        "width": 143,
+        "height": 83,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_045.png",
+        "width": 153,
+        "height": 73,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_046.png",
+        "width": 145,
+        "height": 106,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_047.png",
+        "width": 99,
+        "height": 141,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_048.png",
+        "width": 99,
+        "height": 95,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_049.png",
+        "width": 107,
+        "height": 128,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_050.png",
+        "width": 110,
+        "height": 101,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_051.png",
+        "width": 101,
+        "height": 102,
+        "source_sheet": "batch02_decorations.png"
+      },
+      {
+        "path": "decorations/decor_batch02_052.png",
+        "width": 108,
+        "height": 146,
+        "source_sheet": "batch02_decorations.png"
+      }
+    ],
+    "icons": [
+      {
+        "path": "ui/icons/icon_batch02_001.png",
+        "width": 129,
+        "height": 111,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_002.png",
+        "width": 119,
+        "height": 108,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_003.png",
+        "width": 136,
+        "height": 108,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_004.png",
+        "width": 107,
+        "height": 114,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_005.png",
+        "width": 112,
+        "height": 107,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_006.png",
+        "width": 90,
+        "height": 112,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_007.png",
+        "width": 143,
+        "height": 91,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_008.png",
+        "width": 103,
+        "height": 98,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_009.png",
+        "width": 100,
+        "height": 122,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_010.png",
+        "width": 68,
+        "height": 75,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_011.png",
+        "width": 64,
+        "height": 76,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_012.png",
+        "width": 78,
+        "height": 75,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_013.png",
+        "width": 88,
+        "height": 68,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_014.png",
+        "width": 67,
+        "height": 65,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_015.png",
+        "width": 76,
+        "height": 85,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_016.png",
+        "width": 85,
+        "height": 80,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_017.png",
+        "width": 115,
+        "height": 113,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_018.png",
+        "width": 106,
+        "height": 110,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_019.png",
+        "width": 99,
+        "height": 118,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_020.png",
+        "width": 117,
+        "height": 112,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_021.png",
+        "width": 102,
+        "height": 97,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_022.png",
+        "width": 77,
+        "height": 112,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_023.png",
+        "width": 110,
+        "height": 94,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_024.png",
+        "width": 127,
+        "height": 85,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_025.png",
+        "width": 51,
+        "height": 61,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_026.png",
+        "width": 90,
+        "height": 117,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_027.png",
+        "width": 109,
+        "height": 113,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_028.png",
+        "width": 93,
+        "height": 118,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_029.png",
+        "width": 102,
+        "height": 120,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_030.png",
+        "width": 110,
+        "height": 97,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_031.png",
+        "width": 107,
+        "height": 101,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_032.png",
+        "width": 92,
+        "height": 90,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_033.png",
+        "width": 39,
+        "height": 41,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_034.png",
+        "width": 113,
+        "height": 65,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_035.png",
+        "width": 40,
+        "height": 43,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_036.png",
+        "width": 117,
+        "height": 94,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_037.png",
+        "width": 92,
+        "height": 91,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_038.png",
+        "width": 102,
+        "height": 107,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_039.png",
+        "width": 100,
+        "height": 102,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_040.png",
+        "width": 108,
+        "height": 106,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_041.png",
+        "width": 106,
+        "height": 105,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_042.png",
+        "width": 96,
+        "height": 100,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_043.png",
+        "width": 106,
+        "height": 104,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_044.png",
+        "width": 101,
+        "height": 111,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_045.png",
+        "width": 105,
+        "height": 95,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_046.png",
+        "width": 98,
+        "height": 92,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_047.png",
+        "width": 105,
+        "height": 108,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_048.png",
+        "width": 98,
+        "height": 89,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_049.png",
+        "width": 90,
+        "height": 90,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_050.png",
+        "width": 103,
+        "height": 84,
+        "source_sheet": "batch02_icons.png"
+      },
+      {
+        "path": "ui/icons/icon_batch02_051.png",
+        "width": 117,
+        "height": 109,
+        "source_sheet": "batch02_icons.png"
+      }
+    ],
+    "receipt": [
+      {
+        "path": "receipt/receipt_batch02_001.png",
+        "width": 217,
+        "height": 313,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_002.png",
+        "width": 197,
+        "height": 280,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_003.png",
+        "width": 178,
+        "height": 283,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_004.png",
+        "width": 211,
+        "height": 224,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_005.png",
+        "width": 222,
+        "height": 193,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_006.png",
+        "width": 279,
+        "height": 138,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_007.png",
+        "width": 195,
+        "height": 246,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_008.png",
+        "width": 189,
+        "height": 233,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_009.png",
+        "width": 186,
+        "height": 193,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_010.png",
+        "width": 205,
+        "height": 192,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_011.png",
+        "width": 223,
+        "height": 48,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_012.png",
+        "width": 221,
+        "height": 17,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_013.png",
+        "width": 208,
+        "height": 196,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_014.png",
+        "width": 207,
+        "height": 186,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_015.png",
+        "width": 103,
+        "height": 155,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_016.png",
+        "width": 206,
+        "height": 47,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_017.png",
+        "width": 203,
+        "height": 30,
+        "source_sheet": "batch02_receipt.png"
+      },
+      {
+        "path": "receipt/receipt_batch02_018.png",
+        "width": 200,
+        "height": 74,
+        "source_sheet": "batch02_receipt.png"
+      }
+    ]
+  }
+}
