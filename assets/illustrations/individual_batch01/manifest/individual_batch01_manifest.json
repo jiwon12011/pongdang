@@ -1,0 +1,155 @@
+[
+  {
+    "name": "fish_individual_round_blue_left",
+    "group": "fish",
+    "source": "assets/illustrations/individual_batch01/source_individual/fish_individual_round_blue_left_source.png",
+    "output": "assets/illustrations/individual_batch01/fish/fish_individual_round_blue_left.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      161,
+      942,
+      862
+    ]
+  },
+  {
+    "name": "fish_individual_long_coral_right",
+    "group": "fish",
+    "source": "assets/illustrations/individual_batch01/source_individual/fish_individual_long_coral_right_source.png",
+    "output": "assets/illustrations/individual_batch01/fish/fish_individual_long_coral_right.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      379,
+      942,
+      644
+    ]
+  },
+  {
+    "name": "fish_individual_puffer_teal_left",
+    "group": "fish",
+    "source": "assets/illustrations/individual_batch01/source_individual/fish_individual_puffer_teal_left_source.png",
+    "output": "assets/illustrations/individual_batch01/fish/fish_individual_puffer_teal_left.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      148,
+      942,
+      875
+    ]
+  },
+  {
+    "name": "fish_individual_rare_night_moon_right",
+    "group": "fish",
+    "source": "assets/illustrations/individual_batch01/source_individual/fish_individual_rare_night_moon_right_source.png",
+    "output": "assets/illustrations/individual_batch01/fish/fish_individual_rare_night_moon_right.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      142,
+      942,
+      882
+    ]
+  },
+  {
+    "name": "aquarium_individual_day_rounded_back",
+    "group": "aquarium/back",
+    "source": "assets/illustrations/individual_batch01/source_individual/aquarium_individual_day_rounded_back_source.png",
+    "output": "assets/illustrations/individual_batch01/aquarium/back/aquarium_individual_day_rounded_back.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      86,
+      274,
+      993,
+      1645
+    ]
+  },
+  {
+    "name": "aquarium_individual_day_rounded_front",
+    "group": "aquarium/front",
+    "source": "assets/illustrations/individual_batch01/source_individual/aquarium_individual_day_rounded_front_source.png",
+    "output": "assets/illustrations/individual_batch01/aquarium/front/aquarium_individual_day_rounded_front.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      107,
+      77,
+      972,
+      1842
+    ]
+  },
+  {
+    "name": "icon_individual_home",
+    "group": "ui/icons",
+    "source": "assets/illustrations/individual_batch01/source_individual/icon_individual_home_source.png",
+    "output": "assets/illustrations/individual_batch01/ui/icons/icon_individual_home.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      49,
+      471,
+      462
+    ]
+  },
+  {
+    "name": "icon_individual_aquarium",
+    "group": "ui/icons",
+    "source": "assets/illustrations/individual_batch01/source_individual/icon_individual_aquarium_source.png",
+    "output": "assets/illustrations/individual_batch01/ui/icons/icon_individual_aquarium.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      59,
+      41,
+      453,
+      471
+    ]
+  },
+  {
+    "name": "icon_individual_timer",
+    "group": "ui/icons",
+    "source": "assets/illustrations/individual_batch01/source_individual/icon_individual_timer_source.png",
+    "output": "assets/illustrations/individual_batch01/ui/icons/icon_individual_timer.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      75,
+      41,
+      437,
+      471
+    ]
+  },
+  {
+    "name": "aquarium_individual_day_rounded_merged_preview",
+    "group": "aquarium",
+    "output": "assets/illustrations/individual_batch01/aquarium/aquarium_individual_day_rounded_merged_preview.png",
+    "size": [
+      1080,
+      1920
+    ]
+  }
+]
