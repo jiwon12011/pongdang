@@ -1,0 +1,82 @@
+[
+  {
+    "name": "aquarium_final_003_night_rounded_back",
+    "group": "aquarium/back",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/back/aquarium_final_003_night_rounded_back.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_003_night_rounded_back_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      68,
+      115,
+      1011,
+      1804
+    ]
+  },
+  {
+    "name": "aquarium_final_003_night_rounded_front",
+    "group": "aquarium/front",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/front/aquarium_final_003_night_rounded_front.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_003_night_rounded_front_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      165,
+      115,
+      914,
+      1804
+    ]
+  },
+  {
+    "name": "aquarium_final_004_rainy_rounded_back",
+    "group": "aquarium/back",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/back/aquarium_final_004_rainy_rounded_back.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_004_rainy_rounded_back_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      125,
+      115,
+      954,
+      1804
+    ]
+  },
+  {
+    "name": "aquarium_final_004_rainy_rounded_front",
+    "group": "aquarium/front",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/front/aquarium_final_004_rainy_rounded_front.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_004_rainy_rounded_front_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      82,
+      116,
+      997,
+      1804
+    ]
+  },
+  {
+    "name": "aquarium_final_003_night_rounded_merged_preview",
+    "group": "aquarium/merged_preview",
+    "mode": "preview",
+    "output": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_003_night_rounded_merged_preview.png"
+  },
+  {
+    "name": "aquarium_final_004_rainy_rounded_merged_preview",
+    "group": "aquarium/merged_preview",
+    "mode": "preview",
+    "output": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_004_rainy_rounded_merged_preview.png"
+  }
+]

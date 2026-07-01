@@ -1,0 +1,46 @@
+{
+  "batch": "individual_final_increment_022_fish",
+  "count": 5,
+  "items": [
+    {
+      "id": "fish_final_046_cookie_spotted_ray",
+      "source": "assets/illustrations/individual_final/source/fish_final_046_cookie_spotted_ray_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_046_cookie_spotted_ray.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_047_soda_blue_guppy",
+      "source": "assets/illustrations/individual_final/source/fish_final_047_soda_blue_guppy_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_047_soda_blue_guppy.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_048_pumpkin_orange_blobfish",
+      "source": "assets/illustrations/individual_final/source/fish_final_048_pumpkin_orange_blobfish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_048_pumpkin_orange_blobfish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_049_milk_blue_seahorse",
+      "source": "assets/illustrations/individual_final/source/fish_final_049_milk_blue_seahorse_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_049_milk_blue_seahorse.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_050_navy_moon_jelly",
+      "source": "assets/illustrations/individual_final/source/fish_final_050_navy_moon_jelly_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_050_navy_moon_jelly.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

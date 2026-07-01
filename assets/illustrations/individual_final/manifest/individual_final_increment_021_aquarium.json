@@ -1,0 +1,28 @@
+{
+  "batch": "individual_final_increment_021_aquarium",
+  "count": 3,
+  "items": [
+    {
+      "id": "aquarium_final_005_pearl_dome_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_005_pearl_dome_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_005_pearl_dome_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_005_pearl_dome_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_005_pearl_dome_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_005_pearl_dome_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_005_pearl_dome_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_005_pearl_dome_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    }
+  ]
+}

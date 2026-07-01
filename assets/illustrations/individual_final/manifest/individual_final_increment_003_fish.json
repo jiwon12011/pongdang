@@ -1,0 +1,104 @@
+[
+  {
+    "name": "fish_final_012_cream_eel_like",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_012_cream_eel_like.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_012_cream_eel_like_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      273,
+      942,
+      750
+    ]
+  },
+  {
+    "name": "fish_final_013_peach_heart_tail",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_013_peach_heart_tail.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_013_peach_heart_tail_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      175,
+      942,
+      848
+    ]
+  },
+  {
+    "name": "fish_final_014_blue_tiny_whale",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_014_blue_tiny_whale.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_014_blue_tiny_whale_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      143,
+      942,
+      881
+    ]
+  },
+  {
+    "name": "fish_final_015_green_leaf_fin",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_015_green_leaf_fin.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_015_green_leaf_fin_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      169,
+      942,
+      854
+    ]
+  },
+  {
+    "name": "fish_final_016_white_ghost",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_016_white_ghost.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_016_white_ghost_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      187,
+      942,
+      836
+    ]
+  },
+  {
+    "name": "fish_final_017_dark_teal_starry",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_017_dark_teal_starry.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_017_dark_teal_starry_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      163,
+      942,
+      861
+    ]
+  }
+]

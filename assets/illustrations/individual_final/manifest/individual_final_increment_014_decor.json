@@ -1,0 +1,53 @@
+[
+  {
+    "name": "decor_final_007_spiral_shell",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_007_spiral_shell.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_007_spiral_shell_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      106,
+      471,
+      405
+    ]
+  },
+  {
+    "name": "decor_final_008_moon_charm",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_008_moon_charm.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_008_moon_charm_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      138,
+      41,
+      374,
+      471
+    ]
+  },
+  {
+    "name": "decor_final_009_sun_sticker",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_009_sun_sticker.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_009_sun_sticker_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      47,
+      470,
+      465
+    ]
+  }
+]

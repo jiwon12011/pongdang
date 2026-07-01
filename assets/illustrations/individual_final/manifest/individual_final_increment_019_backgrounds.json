@@ -1,0 +1,51 @@
+{
+  "batch": "individual_final_increment_019_backgrounds",
+  "count": 5,
+  "items": [
+    {
+      "id": "bg_final_011_soft_lilac_bubble_room",
+      "source": "assets/illustrations/individual_final/source/bg_final_011_soft_lilac_bubble_room_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_011_soft_lilac_bubble_room.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_012_blue_receipt_lines",
+      "source": "assets/illustrations/individual_final/source/bg_final_012_blue_receipt_lines_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_012_blue_receipt_lines.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_013_warm_peach_low_tide",
+      "source": "assets/illustrations/individual_final/source/bg_final_013_warm_peach_low_tide_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_013_warm_peach_low_tide.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_014_deep_teal_quiet_night",
+      "source": "assets/illustrations/individual_final/source/bg_final_014_deep_teal_quiet_night_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_014_deep_teal_quiet_night.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_015_milk_white_minimal_sea",
+      "source": "assets/illustrations/individual_final/source/bg_final_015_milk_white_minimal_sea_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_015_milk_white_minimal_sea.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "decor_final_001_tall_wavy_seaweed",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_001_tall_wavy_seaweed.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_001_tall_wavy_seaweed_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      167,
+      41,
+      344,
+      471
+    ]
+  },
+  {
+    "name": "decor_final_002_soft_coral_branch",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_002_soft_coral_branch.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_002_soft_coral_branch_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      82,
+      41,
+      430,
+      471
+    ]
+  },
+  {
+    "name": "decor_final_003_pebble_stack",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_003_pebble_stack.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_003_pebble_stack_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      55,
+      41,
+      457,
+      471
+    ]
+  },
+  {
+    "name": "decor_final_004_bubble_cluster",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_004_bubble_cluster.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_004_bubble_cluster_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      97,
+      471,
+      415
+    ]
+  },
+  {
+    "name": "decor_final_005_gold_sparkle_star",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_005_gold_sparkle_star.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_005_gold_sparkle_star_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      71,
+      41,
+      441,
+      471
+    ]
+  },
+  {
+    "name": "decor_final_006_pink_ribbon_bow",
+    "group": "decorations",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/decorations/decor_final_006_pink_ribbon_bow.png",
+    "source": "assets/illustrations/individual_final/source/decor_final_006_pink_ribbon_bow_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      77,
+      471,
+      434
+    ]
+  }
+]

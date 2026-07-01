@@ -1,0 +1,100 @@
+[
+  {
+    "name": "bg_final_003_sunset_coral_diary",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_003_sunset_coral_diary.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_003_sunset_coral_diary_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": null
+  },
+  {
+    "name": "bg_final_004_night_navy_moon",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_004_night_navy_moon.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_004_night_navy_moon_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": null
+  },
+  {
+    "name": "aquarium_final_002_sunset_rounded_back",
+    "group": "aquarium/back",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/back/aquarium_final_002_sunset_rounded_back.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_002_sunset_rounded_back_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      65,
+      123,
+      1015,
+      1796
+    ]
+  },
+  {
+    "name": "aquarium_final_002_sunset_rounded_front",
+    "group": "aquarium/front",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/aquarium/front/aquarium_final_002_sunset_rounded_front.png",
+    "source": "assets/illustrations/individual_final/source/aquarium_final_002_sunset_rounded_front_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": [
+      65,
+      145,
+      1015,
+      1775
+    ]
+  },
+  {
+    "name": "icon_final_005_join_room",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_005_join_room.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_005_join_room_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      56,
+      41,
+      455,
+      471
+    ]
+  },
+  {
+    "name": "icon_final_006_qr_scan",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_006_qr_scan.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_006_qr_scan_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      43,
+      471,
+      468
+    ]
+  },
+  {
+    "name": "aquarium_final_002_sunset_rounded_merged_preview",
+    "group": "aquarium/merged_preview",
+    "mode": "preview",
+    "output": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_002_sunset_rounded_merged_preview.png"
+  }
+]

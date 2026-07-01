@@ -1,0 +1,70 @@
+[
+  {
+    "name": "receipt_final_001_wobbly_receipt_frame",
+    "group": "receipt",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/receipt/receipt_final_001_wobbly_receipt_frame.png",
+    "source": "assets/illustrations/individual_final/source/receipt_final_001_wobbly_receipt_frame_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      254,
+      61,
+      769,
+      962
+    ]
+  },
+  {
+    "name": "receipt_final_002_scalloped_label_badge",
+    "group": "receipt",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/receipt/receipt_final_002_scalloped_label_badge.png",
+    "source": "assets/illustrations/individual_final/source/receipt_final_002_scalloped_label_badge_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      61,
+      238,
+      962,
+      785
+    ]
+  },
+  {
+    "name": "receipt_final_003_dotted_bubble_divider",
+    "group": "receipt",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/receipt/receipt_final_003_dotted_bubble_divider.png",
+    "source": "assets/illustrations/individual_final/source/receipt_final_003_dotted_bubble_divider_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      61,
+      493,
+      962,
+      530
+    ]
+  },
+  {
+    "name": "receipt_final_004_blank_fish_card_frame",
+    "group": "receipt",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/receipt/receipt_final_004_blank_fish_card_frame.png",
+    "source": "assets/illustrations/individual_final/source/receipt_final_004_blank_fish_card_frame_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      217,
+      62,
+      806,
+      962
+    ]
+  }
+]

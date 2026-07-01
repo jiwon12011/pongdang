@@ -1,0 +1,82 @@
+[
+  {
+    "name": "fish_final_009_blue_striped",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_009_blue_striped.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_009_blue_striped_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      173,
+      942,
+      851
+    ]
+  },
+  {
+    "name": "fish_final_010_yellow_sun_puffer",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_010_yellow_sun_puffer.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_010_yellow_sun_puffer_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      150,
+      942,
+      873
+    ]
+  },
+  {
+    "name": "fish_final_011_lavender_shy",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_011_lavender_shy.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_011_lavender_shy_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      172,
+      942,
+      851
+    ]
+  },
+  {
+    "name": "bg_final_002_pastel_blue_bubbles",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_002_pastel_blue_bubbles.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_002_pastel_blue_bubbles_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": null
+  },
+  {
+    "name": "icon_final_004_friends",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_004_friends.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_004_friends_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      129,
+      471,
+      382
+    ]
+  }
+]

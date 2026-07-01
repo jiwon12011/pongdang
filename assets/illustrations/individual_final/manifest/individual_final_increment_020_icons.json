@@ -1,0 +1,51 @@
+{
+  "batch": "individual_final_increment_020_icons",
+  "count": 5,
+  "items": [
+    {
+      "id": "icon_final_016_back_arrow",
+      "source": "assets/illustrations/individual_final/source/icon_final_016_back_arrow_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_016_back_arrow.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_017_check_ok",
+      "source": "assets/illustrations/individual_final/source/icon_final_017_check_ok_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_017_check_ok.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_018_warning_wave",
+      "source": "assets/illustrations/individual_final/source/icon_final_018_warning_wave_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_018_warning_wave.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_019_plus_add",
+      "source": "assets/illustrations/individual_final/source/icon_final_019_plus_add_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_019_plus_add.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_020_minus_remove",
+      "source": "assets/illustrations/individual_final/source/icon_final_020_minus_remove_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_020_minus_remove.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    }
+  ]
+}

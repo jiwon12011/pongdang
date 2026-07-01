@@ -1,0 +1,82 @@
+[
+  {
+    "name": "fish_final_005_pink_jelly_blob",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_005_pink_jelly_blob.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_005_pink_jelly_blob_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      180,
+      942,
+      844
+    ]
+  },
+  {
+    "name": "fish_final_006_mint_moon_tail",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_006_mint_moon_tail.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_006_mint_moon_tail_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      207,
+      942,
+      817
+    ]
+  },
+  {
+    "name": "fish_final_007_orange_shrimp_like",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_007_orange_shrimp_like.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_007_orange_shrimp_like_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      160,
+      82,
+      863,
+      942
+    ]
+  },
+  {
+    "name": "fish_final_008_cream_sleepy_manta",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_008_cream_sleepy_manta.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_008_cream_sleepy_manta_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      197,
+      942,
+      826
+    ]
+  },
+  {
+    "name": "bg_final_001_cream_underwater_diary",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_001_cream_underwater_diary.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_001_cream_underwater_diary_source.png",
+    "size": [
+      1080,
+      1920
+    ],
+    "alpha_bbox": null
+  }
+]

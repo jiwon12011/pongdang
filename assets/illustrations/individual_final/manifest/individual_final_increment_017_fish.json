@@ -1,0 +1,46 @@
+{
+  "batch": "individual_final_increment_017_fish",
+  "count": 5,
+  "items": [
+    {
+      "id": "fish_final_036_peach_fan_tail",
+      "source": "assets/illustrations/individual_final/source/fish_final_036_peach_fan_tail_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_036_peach_fan_tail.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_037_blue_pencil_shark",
+      "source": "assets/illustrations/individual_final/source/fish_final_037_blue_pencil_shark_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_037_blue_pencil_shark.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_038_cream_blob_squid",
+      "source": "assets/illustrations/individual_final/source/fish_final_038_cream_blob_squid_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_038_cream_blob_squid.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_039_lavender_shell_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_039_lavender_shell_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_039_lavender_shell_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_040_mint_leafy_seadragon",
+      "source": "assets/illustrations/individual_final/source/fish_final_040_mint_leafy_seadragon_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_040_mint_leafy_seadragon.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

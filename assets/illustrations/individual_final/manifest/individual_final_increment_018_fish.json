@@ -1,0 +1,46 @@
+{
+  "batch": "individual_final_increment_018_fish",
+  "count": 5,
+  "items": [
+    {
+      "id": "fish_final_041_tiny_blue_betta",
+      "source": "assets/illustrations/individual_final/source/fish_final_041_tiny_blue_betta_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_041_tiny_blue_betta.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_042_orange_clown_round",
+      "source": "assets/illustrations/individual_final/source/fish_final_042_orange_clown_round_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_042_orange_clown_round.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_043_pale_starfish_buddy",
+      "source": "assets/illustrations/individual_final/source/fish_final_043_pale_starfish_buddy_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_043_pale_starfish_buddy.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_044_gray_sleepy_catfish",
+      "source": "assets/illustrations/individual_final/source/fish_final_044_gray_sleepy_catfish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_044_gray_sleepy_catfish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_045_pink_pearl_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_045_pink_pearl_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_045_pink_pearl_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

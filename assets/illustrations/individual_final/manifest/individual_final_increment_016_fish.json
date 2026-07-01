@@ -1,0 +1,46 @@
+{
+  "batch": "individual_final_increment_016_fish",
+  "count": 5,
+  "items": [
+    {
+      "id": "fish_final_031_bubble_cheek",
+      "source": "assets/illustrations/individual_final/source/fish_final_031_bubble_cheek_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_031_bubble_cheek.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_032_sleepy_striped",
+      "source": "assets/illustrations/individual_final/source/fish_final_032_sleepy_striped_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_032_sleepy_striped.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_033_tiny_rain",
+      "source": "assets/illustrations/individual_final/source/fish_final_033_tiny_rain_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_033_tiny_rain.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_034_tiny_love",
+      "source": "assets/illustrations/individual_final/source/fish_final_034_tiny_love_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_034_tiny_love.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_035_green_spotted_moonfish",
+      "source": "assets/illustrations/individual_final/source/fish_final_035_green_spotted_moonfish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_035_green_spotted_moonfish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

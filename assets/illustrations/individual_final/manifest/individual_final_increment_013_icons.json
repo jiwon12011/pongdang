@@ -1,0 +1,53 @@
+[
+  {
+    "name": "icon_final_013_settings",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_013_settings.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_013_settings_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      42,
+      471,
+      469
+    ]
+  },
+  {
+    "name": "icon_final_014_calendar",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_014_calendar.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_014_calendar_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      42,
+      470,
+      470
+    ]
+  },
+  {
+    "name": "icon_final_015_lock",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_015_lock.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_015_lock_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      81,
+      41,
+      431,
+      471
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "name": "fish_final_018_red_tiny_octopus",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_018_red_tiny_octopus.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_018_red_tiny_octopus_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      102,
+      82,
+      922,
+      942
+    ]
+  },
+  {
+    "name": "fish_final_019_pale_blue_jellyfish",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_019_pale_blue_jellyfish.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_019_pale_blue_jellyfish_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      114,
+      82,
+      910,
+      942
+    ]
+  },
+  {
+    "name": "fish_final_020_silver_anchovy",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_020_silver_anchovy.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_020_silver_anchovy_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      412,
+      942,
+      612
+    ]
+  },
+  {
+    "name": "fish_final_021_cream_dumpling",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_021_cream_dumpling.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_021_cream_dumpling_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      179,
+      942,
+      844
+    ]
+  }
+]

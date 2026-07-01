@@ -1,0 +1,104 @@
+[
+  {
+    "name": "icon_final_007_start_play",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_007_start_play.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_007_start_play_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      70,
+      41,
+      441,
+      471
+    ]
+  },
+  {
+    "name": "icon_final_008_pause",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_008_pause.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_008_pause_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      43,
+      41,
+      469,
+      471
+    ]
+  },
+  {
+    "name": "icon_final_009_close_x",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_009_close_x.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_009_close_x_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      41,
+      43,
+      471,
+      469
+    ]
+  },
+  {
+    "name": "icon_final_010_share",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_010_share.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_010_share_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      66,
+      41,
+      445,
+      471
+    ]
+  },
+  {
+    "name": "icon_final_011_gift",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_011_gift.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_011_gift_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      53,
+      41,
+      459,
+      471
+    ]
+  },
+  {
+    "name": "icon_final_012_receipt",
+    "group": "ui/icons",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/ui/icons/icon_final_012_receipt.png",
+    "source": "assets/illustrations/individual_final/source/icon_final_012_receipt_source.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha_bbox": [
+      75,
+      41,
+      436,
+      471
+    ]
+  }
+]

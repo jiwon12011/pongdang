@@ -1,0 +1,35 @@
+[
+  {
+    "name": "bg_final_008_morning_mint",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_008_morning_mint.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_008_morning_mint_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  {
+    "name": "bg_final_009_coral_garden",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_009_coral_garden.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_009_coral_garden_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  {
+    "name": "bg_final_010_blank_diary",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_010_blank_diary.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_010_blank_diary_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  }
+]

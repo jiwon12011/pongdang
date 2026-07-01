@@ -1,0 +1,35 @@
+[
+  {
+    "name": "bg_final_005_rainy_blue_gray",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_005_rainy_blue_gray.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_005_rainy_blue_gray_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  {
+    "name": "bg_final_006_cream_grid_stationery",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_006_cream_grid_stationery.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_006_cream_grid_stationery_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  {
+    "name": "bg_final_007_winter_pearl",
+    "group": "backgrounds",
+    "mode": "opaque",
+    "output": "assets/illustrations/individual_final/backgrounds/bg_final_007_winter_pearl.png",
+    "source": "assets/illustrations/individual_final/source/bg_final_007_winter_pearl_source.png",
+    "size": [
+      1080,
+      1920
+    ]
+  }
+]

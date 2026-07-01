@@ -1,0 +1,53 @@
+[
+  {
+    "name": "fish_final_025_pastel_ribbon",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_025_pastel_ribbon.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_025_pastel_ribbon_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      340,
+      941,
+      683
+    ]
+  },
+  {
+    "name": "fish_final_026_turtle_friend",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_026_turtle_friend.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_026_turtle_friend_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      211,
+      942,
+      812
+    ]
+  },
+  {
+    "name": "fish_final_027_blue_star_ray",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_027_blue_star_ray.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_027_blue_star_ray_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      179,
+      942,
+      845
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "name": "fish_final_022_pink_shellfish_friend",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_022_pink_shellfish_friend.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_022_pink_shellfish_friend_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      118,
+      942,
+      906
+    ]
+  },
+  {
+    "name": "fish_final_023_blue_round_sunfish",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_023_blue_round_sunfish.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_023_blue_round_sunfish_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      137,
+      82,
+      886,
+      942
+    ]
+  },
+  {
+    "name": "fish_final_024_golden_legendary",
+    "group": "fish",
+    "mode": "transparent",
+    "output": "assets/illustrations/individual_final/fish/fish_final_024_golden_legendary.png",
+    "source": "assets/illustrations/individual_final/source/fish_final_024_golden_legendary_source.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_bbox": [
+      82,
+      189,
+      942,
+      834
+    ]
+  }
+]
