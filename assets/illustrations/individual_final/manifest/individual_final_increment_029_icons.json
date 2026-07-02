@@ -1,0 +1,96 @@
+{
+  "batch": "individual_final_increment_029_icons",
+  "count": 10,
+  "items": [
+    {
+      "id": "icon_final_031_refresh_wave",
+      "source": "assets/illustrations/individual_final/source/icon_final_031_refresh_wave_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_031_refresh_wave.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_032_download_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_032_download_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_032_download_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_033_upload_bubble",
+      "source": "assets/illustrations/individual_final/source/icon_final_033_upload_bubble_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_033_upload_bubble.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_034_filter_net",
+      "source": "assets/illustrations/individual_final/source/icon_final_034_filter_net_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_034_filter_net.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_035_heart_bubble",
+      "source": "assets/illustrations/individual_final/source/icon_final_035_heart_bubble_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_035_heart_bubble.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_036_star_badge",
+      "source": "assets/illustrations/individual_final/source/icon_final_036_star_badge_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_036_star_badge.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_037_invite_envelope",
+      "source": "assets/illustrations/individual_final/source/icon_final_037_invite_envelope_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_037_invite_envelope.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_038_room_key",
+      "source": "assets/illustrations/individual_final/source/icon_final_038_room_key_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_038_room_key.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_039_group_bubbles",
+      "source": "assets/illustrations/individual_final/source/icon_final_039_group_bubbles_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_039_group_bubbles.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_040_wifi_off_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_040_wifi_off_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_040_wifi_off_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    }
+  ]
+}

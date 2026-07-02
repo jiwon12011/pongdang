@@ -1,0 +1,86 @@
+{
+  "batch": "individual_final_increment_027_fish",
+  "count": 10,
+  "items": [
+    {
+      "id": "fish_final_061_blueberry_puffer",
+      "source": "assets/illustrations/individual_final/source/fish_final_061_blueberry_puffer_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_061_blueberry_puffer.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_062_peach_ribbon_eel",
+      "source": "assets/illustrations/individual_final/source/fish_final_062_peach_ribbon_eel_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_062_peach_ribbon_eel.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_063_mint_crown_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_063_mint_crown_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_063_mint_crown_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_064_lavender_orca_baby",
+      "source": "assets/illustrations/individual_final/source/fish_final_064_lavender_orca_baby_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_064_lavender_orca_baby.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_065_coral_round_crab",
+      "source": "assets/illustrations/individual_final/source/fish_final_065_coral_round_crab_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_065_coral_round_crab.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_066_yellow_banana_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_066_yellow_banana_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_066_yellow_banana_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_067_pale_blue_angelfish",
+      "source": "assets/illustrations/individual_final/source/fish_final_067_pale_blue_angelfish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_067_pale_blue_angelfish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_068_pink_candy_shrimp",
+      "source": "assets/illustrations/individual_final/source/fish_final_068_pink_candy_shrimp_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_068_pink_candy_shrimp.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_069_cream_pillow_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_069_cream_pillow_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_069_cream_pillow_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_070_green_tea_turtle",
+      "source": "assets/illustrations/individual_final/source/fish_final_070_green_tea_turtle_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_070_green_tea_turtle.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

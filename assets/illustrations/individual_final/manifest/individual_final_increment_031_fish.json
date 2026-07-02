@@ -1,0 +1,86 @@
+{
+  "batch": "individual_final_increment_031_fish",
+  "count": 10,
+  "items": [
+    {
+      "id": "fish_final_071_pink_mochi_axolotl",
+      "source": "assets/illustrations/individual_final/source/fish_final_071_pink_mochi_axolotl_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_071_pink_mochi_axolotl.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_072_blue_paperboat_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_072_blue_paperboat_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_072_blue_paperboat_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_073_cream_sleepy_shell_snail",
+      "source": "assets/illustrations/individual_final/source/fish_final_073_cream_sleepy_shell_snail_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_073_cream_sleepy_shell_snail.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_074_lilac_cloud_ray",
+      "source": "assets/illustrations/individual_final/source/fish_final_074_lilac_cloud_ray_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_074_lilac_cloud_ray.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_075_mint_bubble_octopus",
+      "source": "assets/illustrations/individual_final/source/fish_final_075_mint_bubble_octopus_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_075_mint_bubble_octopus.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_076_yellow_lantern_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_076_yellow_lantern_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_076_yellow_lantern_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_077_coral_heart_crab",
+      "source": "assets/illustrations/individual_final/source/fish_final_077_coral_heart_crab_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_077_coral_heart_crab.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_078_blue_sleepy_sardine",
+      "source": "assets/illustrations/individual_final/source/fish_final_078_blue_sleepy_sardine_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_078_blue_sleepy_sardine.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_079_peach_fluffy_jelly",
+      "source": "assets/illustrations/individual_final/source/fish_final_079_peach_fluffy_jelly_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_079_peach_fluffy_jelly.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_080_mint_sleepy_manta_baby",
+      "source": "assets/illustrations/individual_final/source/fish_final_080_mint_sleepy_manta_baby_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_080_mint_sleepy_manta_baby.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

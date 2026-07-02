@@ -1,0 +1,96 @@
+{
+  "batch": "individual_final_increment_025_icons",
+  "count": 10,
+  "items": [
+    {
+      "id": "icon_final_021_fish_food",
+      "source": "assets/illustrations/individual_final/source/icon_final_021_fish_food_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_021_fish_food.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_022_bubble_chat",
+      "source": "assets/illustrations/individual_final/source/icon_final_022_bubble_chat_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_022_bubble_chat.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_023_trophy_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_023_trophy_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_023_trophy_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_024_music_note_bubble",
+      "source": "assets/illustrations/individual_final/source/icon_final_024_music_note_bubble_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_024_music_note_bubble.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_025_camera_capture",
+      "source": "assets/illustrations/individual_final/source/icon_final_025_camera_capture_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_025_camera_capture.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_026_profile_face",
+      "source": "assets/illustrations/individual_final/source/icon_final_026_profile_face_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_026_profile_face.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_027_bell_notice",
+      "source": "assets/illustrations/individual_final/source/icon_final_027_bell_notice_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_027_bell_notice.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_028_shop_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_028_shop_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_028_shop_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_029_map_pin_drop",
+      "source": "assets/illustrations/individual_final/source/icon_final_029_map_pin_drop_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_029_map_pin_drop.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_030_book_diary",
+      "source": "assets/illustrations/individual_final/source/icon_final_030_book_diary_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_030_book_diary.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    }
+  ]
+}

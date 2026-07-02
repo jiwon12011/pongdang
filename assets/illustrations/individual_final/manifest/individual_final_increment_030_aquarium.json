@@ -1,0 +1,50 @@
+{
+  "batch": "individual_final_increment_030_aquarium",
+  "count": 6,
+  "items": [
+    {
+      "id": "aquarium_final_008_round_candy_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_008_round_candy_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_008_round_candy_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_008_round_candy_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_008_round_candy_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_008_round_candy_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_009_tall_capsule_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_009_tall_capsule_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_009_tall_capsule_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_009_tall_capsule_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_009_tall_capsule_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_009_tall_capsule_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_008_round_candy_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_008_round_candy_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    },
+    {
+      "id": "aquarium_final_009_tall_capsule_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_009_tall_capsule_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    }
+  ]
+}

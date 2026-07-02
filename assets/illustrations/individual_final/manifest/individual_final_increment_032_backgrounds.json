@@ -1,0 +1,51 @@
+{
+  "batch": "individual_final_increment_032_backgrounds",
+  "count": 5,
+  "items": [
+    {
+      "id": "bg_final_026_sakura_tide_pool",
+      "source": "assets/illustrations/individual_final/source/bg_final_026_sakura_tide_pool_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_026_sakura_tide_pool.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_027_pearl_white_quiet",
+      "source": "assets/illustrations/individual_final/source/bg_final_027_pearl_white_quiet_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_027_pearl_white_quiet.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_028_soft_purple_sleep_sea",
+      "source": "assets/illustrations/individual_final/source/bg_final_028_soft_purple_sleep_sea_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_028_soft_purple_sleep_sea.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_029_mint_morning_bubbles",
+      "source": "assets/illustrations/individual_final/source/bg_final_029_mint_morning_bubbles_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_029_mint_morning_bubbles.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_030_deep_blue_receipt_night",
+      "source": "assets/illustrations/individual_final/source/bg_final_030_deep_blue_receipt_night_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_030_deep_blue_receipt_night.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    }
+  ]
+}

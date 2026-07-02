@@ -1,0 +1,96 @@
+{
+  "batch": "individual_final_increment_037_icons",
+  "count": 10,
+  "items": [
+    {
+      "id": "icon_final_051_edit_pencil",
+      "source": "assets/illustrations/individual_final/source/icon_final_051_edit_pencil_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_051_edit_pencil.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_052_pin_favorite",
+      "source": "assets/illustrations/individual_final/source/icon_final_052_pin_favorite_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_052_pin_favorite.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_053_expand_corners",
+      "source": "assets/illustrations/individual_final/source/icon_final_053_expand_corners_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_053_expand_corners.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_054_collapse_corners",
+      "source": "assets/illustrations/individual_final/source/icon_final_054_collapse_corners_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_054_collapse_corners.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_055_empty_state_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_055_empty_state_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_055_empty_state_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_056_error_bubble",
+      "source": "assets/illustrations/individual_final/source/icon_final_056_error_bubble_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_056_error_bubble.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_057_success_sparkle",
+      "source": "assets/illustrations/individual_final/source/icon_final_057_success_sparkle_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_057_success_sparkle.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_058_collection_book",
+      "source": "assets/illustrations/individual_final/source/icon_final_058_collection_book_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_058_collection_book.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_059_streak_flame_water",
+      "source": "assets/illustrations/individual_final/source/icon_final_059_streak_flame_water_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_059_streak_flame_water.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_060_help_lifebuoy",
+      "source": "assets/illustrations/individual_final/source/icon_final_060_help_lifebuoy_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_060_help_lifebuoy.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    }
+  ]
+}

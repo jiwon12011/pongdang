@@ -1,0 +1,51 @@
+{
+  "batch": "individual_final_increment_028_backgrounds",
+  "count": 5,
+  "items": [
+    {
+      "id": "bg_final_021_soft_coral_arch",
+      "source": "assets/illustrations/individual_final/source/bg_final_021_soft_coral_arch_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_021_soft_coral_arch.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_022_midnight_starry_water",
+      "source": "assets/illustrations/individual_final/source/bg_final_022_midnight_starry_water_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_022_midnight_starry_water.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_023_blue_grid_sea_tiles",
+      "source": "assets/illustrations/individual_final/source/bg_final_023_blue_grid_sea_tiles_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_023_blue_grid_sea_tiles.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_024_misty_lavender_depth",
+      "source": "assets/illustrations/individual_final/source/bg_final_024_misty_lavender_depth_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_024_misty_lavender_depth.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_025_warm_sticker_ocean",
+      "source": "assets/illustrations/individual_final/source/bg_final_025_warm_sticker_ocean_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_025_warm_sticker_ocean.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    }
+  ]
+}

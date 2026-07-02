@@ -1,0 +1,51 @@
+{
+  "batch": "individual_final_increment_036_backgrounds",
+  "count": 5,
+  "items": [
+    {
+      "id": "bg_final_031_cotton_candy_water",
+      "source": "assets/illustrations/individual_final/source/bg_final_031_cotton_candy_water_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_031_cotton_candy_water.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_032_green_aquatic_notebook",
+      "source": "assets/illustrations/individual_final/source/bg_final_032_green_aquatic_notebook_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_032_green_aquatic_notebook.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_033_cream_pebble_bottom",
+      "source": "assets/illustrations/individual_final/source/bg_final_033_cream_pebble_bottom_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_033_cream_pebble_bottom.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_034_blue_rainbow_bubbles",
+      "source": "assets/illustrations/individual_final/source/bg_final_034_blue_rainbow_bubbles_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_034_blue_rainbow_bubbles.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "bg_final_035_lavender_shell_corners",
+      "source": "assets/illustrations/individual_final/source/bg_final_035_lavender_shell_corners_source.png",
+      "file": "assets/illustrations/individual_final/backgrounds/bg_final_035_lavender_shell_corners.png",
+      "category": "background",
+      "size": "1080x1920",
+      "opaque_png": true,
+      "generated_individually": true
+    }
+  ]
+}

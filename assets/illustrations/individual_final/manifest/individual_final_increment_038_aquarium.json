@@ -1,0 +1,50 @@
+{
+  "batch": "individual_final_increment_038_aquarium",
+  "count": 6,
+  "items": [
+    {
+      "id": "aquarium_final_012_shell_window_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_012_shell_window_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_012_shell_window_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_012_shell_window_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_012_shell_window_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_012_shell_window_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_013_round_pot_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_013_round_pot_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_013_round_pot_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_013_round_pot_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_013_round_pot_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_013_round_pot_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_012_shell_window_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_012_shell_window_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    },
+    {
+      "id": "aquarium_final_013_round_pot_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_013_round_pot_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    }
+  ]
+}

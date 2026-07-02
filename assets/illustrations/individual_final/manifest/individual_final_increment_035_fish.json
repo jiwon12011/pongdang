@@ -1,0 +1,86 @@
+{
+  "batch": "individual_final_increment_035_fish",
+  "count": 10,
+  "items": [
+    {
+      "id": "fish_final_081_caramel_shell_turtle",
+      "source": "assets/illustrations/individual_final/source/fish_final_081_caramel_shell_turtle_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_081_caramel_shell_turtle.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_082_blue_scarf_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_082_blue_scarf_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_082_blue_scarf_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_083_lavender_star_octopus",
+      "source": "assets/illustrations/individual_final/source/fish_final_083_lavender_star_octopus_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_083_lavender_star_octopus.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_084_mint_leaf_ray",
+      "source": "assets/illustrations/individual_final/source/fish_final_084_mint_leaf_ray_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_084_mint_leaf_ray.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_085_peach_bean_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_085_peach_bean_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_085_peach_bean_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_086_cream_ribbon_jelly",
+      "source": "assets/illustrations/individual_final/source/fish_final_086_cream_ribbon_jelly_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_086_cream_ribbon_jelly.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_087_blue_droplet_seahorse",
+      "source": "assets/illustrations/individual_final/source/fish_final_087_blue_droplet_seahorse_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_087_blue_droplet_seahorse.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_088_yellow_pudding_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_088_yellow_pudding_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_088_yellow_pudding_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_089_lilac_sleepy_clam",
+      "source": "assets/illustrations/individual_final/source/fish_final_089_lilac_sleepy_clam_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_089_lilac_sleepy_clam.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_090_mint_star_puffer",
+      "source": "assets/illustrations/individual_final/source/fish_final_090_mint_star_puffer_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_090_mint_star_puffer.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

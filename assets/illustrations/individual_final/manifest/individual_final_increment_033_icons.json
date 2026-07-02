@@ -1,0 +1,96 @@
+{
+  "batch": "individual_final_increment_033_icons",
+  "count": 10,
+  "items": [
+    {
+      "id": "icon_final_041_search_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_041_search_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_041_search_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_042_sort_waves",
+      "source": "assets/illustrations/individual_final/source/icon_final_042_sort_waves_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_042_sort_waves.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_043_crown_premium",
+      "source": "assets/illustrations/individual_final/source/icon_final_043_crown_premium_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_043_crown_premium.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_044_alarm_clock",
+      "source": "assets/illustrations/individual_final/source/icon_final_044_alarm_clock_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_044_alarm_clock.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_045_sleep_moon",
+      "source": "assets/illustrations/individual_final/source/icon_final_045_sleep_moon_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_045_sleep_moon.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_046_coin_pearl",
+      "source": "assets/illustrations/individual_final/source/icon_final_046_coin_pearl_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_046_coin_pearl.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_047_palette_shell",
+      "source": "assets/illustrations/individual_final/source/icon_final_047_palette_shell_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_047_palette_shell.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_048_medal_fish",
+      "source": "assets/illustrations/individual_final/source/icon_final_048_medal_fish_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_048_medal_fish.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_049_copy_link",
+      "source": "assets/illustrations/individual_final/source/icon_final_049_copy_link_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_049_copy_link.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    },
+    {
+      "id": "icon_final_050_trash_bin",
+      "source": "assets/illustrations/individual_final/source/icon_final_050_trash_bin_source.png",
+      "file": "assets/illustrations/individual_final/ui/icons/icon_final_050_trash_bin.png",
+      "category": "icon",
+      "transparent_png": true,
+      "size": "512x512",
+      "generated_individually": true
+    }
+  ]
+}

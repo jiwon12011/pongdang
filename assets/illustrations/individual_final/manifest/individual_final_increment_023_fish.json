@@ -1,0 +1,86 @@
+{
+  "batch": "individual_final_increment_023_fish",
+  "count": 10,
+  "items": [
+    {
+      "id": "fish_final_051_yellow_raincoat_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_051_yellow_raincoat_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_051_yellow_raincoat_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_052_pale_lime_boxfish",
+      "source": "assets/illustrations/individual_final/source/fish_final_052_pale_lime_boxfish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_052_pale_lime_boxfish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_053_peach_sleepy_koi",
+      "source": "assets/illustrations/individual_final/source/fish_final_053_peach_sleepy_koi_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_053_peach_sleepy_koi.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_054_blue_button_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_054_blue_button_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_054_blue_button_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_055_purple_sleep_shell",
+      "source": "assets/illustrations/individual_final/source/fish_final_055_purple_sleep_shell_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_055_purple_sleep_shell.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_056_mint_sleepy_tadpole",
+      "source": "assets/illustrations/individual_final/source/fish_final_056_mint_sleepy_tadpole_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_056_mint_sleepy_tadpole.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_057_coral_flower_jelly",
+      "source": "assets/illustrations/individual_final/source/fish_final_057_coral_flower_jelly_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_057_coral_flower_jelly.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_058_white_mochi_whale",
+      "source": "assets/illustrations/individual_final/source/fish_final_058_white_mochi_whale_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_058_white_mochi_whale.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_059_gray_sock_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_059_gray_sock_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_059_gray_sock_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "fish_final_060_gold_star_tail_fish",
+      "source": "assets/illustrations/individual_final/source/fish_final_060_gold_star_tail_fish_source.png",
+      "file": "assets/illustrations/individual_final/fish/fish_final_060_gold_star_tail_fish.png",
+      "category": "fish",
+      "transparent_png": true,
+      "generated_individually": true
+    }
+  ]
+}

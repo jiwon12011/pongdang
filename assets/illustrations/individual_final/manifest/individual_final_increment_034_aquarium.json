@@ -1,0 +1,50 @@
+{
+  "batch": "individual_final_increment_034_aquarium",
+  "count": 6,
+  "items": [
+    {
+      "id": "aquarium_final_010_wide_lagoon_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_010_wide_lagoon_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_010_wide_lagoon_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_010_wide_lagoon_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_010_wide_lagoon_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_010_wide_lagoon_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_011_vase_bowl_back",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_011_vase_bowl_back_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/back/aquarium_final_011_vase_bowl_back.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_011_vase_bowl_front",
+      "source": "assets/illustrations/individual_final/source/aquarium_final_011_vase_bowl_front_source.png",
+      "file": "assets/illustrations/individual_final/aquarium/front/aquarium_final_011_vase_bowl_front.png",
+      "category": "aquarium_layer",
+      "transparent_png": true,
+      "generated_individually": true
+    },
+    {
+      "id": "aquarium_final_010_wide_lagoon_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_010_wide_lagoon_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    },
+    {
+      "id": "aquarium_final_011_vase_bowl_merged_empty_preview",
+      "file": "assets/illustrations/individual_final/aquarium/merged_preview/aquarium_final_011_vase_bowl_merged_empty_preview.png",
+      "category": "aquarium_preview",
+      "contains_fish": false
+    }
+  ]
+}
