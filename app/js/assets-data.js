@@ -52,6 +52,58 @@ export const AQUARIUM_VARIANTS = {
   night:  { tank: 'aquarium_final_003_night_rounded',    bg: 'bg_final_004_night_navy_moon' },
 };
 
+// ── 어항 공용 추가 변형 8종 (2차 배치) — 세션 시작 시 시간대 변형 1 + 이 8개에서 균등 랜덤 ──
+export const AQUARIUM_EXTRA_TANKS = [
+  'aquarium_final_006_square_sticker',
+  'aquarium_final_007_hanging_bag',
+  'aquarium_final_008_round_candy',
+  'aquarium_final_009_tall_capsule',
+  'aquarium_final_010_wide_lagoon',
+  'aquarium_final_011_vase_bowl',
+  'aquarium_final_012_shell_window',
+  'aquarium_final_013_round_pot',
+];
+
+// ── 홈 배경 풀 (designer 확정) — [0] = 기존 기본, 017·027은 두 풀 겸용 ──
+export const HOME_BG_POOLS = {
+  dawn: [
+    'bg_final_008_morning_mint', 'bg_final_017_pink_shell_diary', 'bg_final_024_misty_lavender_depth',
+    'bg_final_027_pearl_white_quiet', 'bg_final_029_mint_morning_bubbles', 'bg_final_035_lavender_shell_corners',
+  ],
+  day: [
+    'bg_final_002_pastel_blue_bubbles', 'bg_final_016_pale_green_window_water', 'bg_final_018_cloudy_blue_underwater',
+    'bg_final_019_yellow_morning_tide', 'bg_final_025_warm_sticker_ocean', 'bg_final_027_pearl_white_quiet',
+    'bg_final_032_green_aquatic_notebook', 'bg_final_033_cream_pebble_bottom',
+  ],
+  sunset: [
+    'bg_final_003_sunset_coral_diary', 'bg_final_017_pink_shell_diary',
+    'bg_final_021_soft_coral_arch', 'bg_final_031_cotton_candy_water',
+  ],
+  night: [
+    'bg_final_004_night_navy_moon', 'bg_final_022_midnight_starry_water',
+    'bg_final_028_soft_purple_sleep_sea', 'bg_final_030_deep_blue_receipt_night',
+  ],
+};
+
+// ── 과거 어항 배경 풀 = 신규 20장 전부 (020·023·026·034는 홈 금지 — 가독 보호, 여기 전용) ──
+export const PAST_TANK_BG_POOL = [
+  'bg_final_016_pale_green_window_water', 'bg_final_017_pink_shell_diary', 'bg_final_018_cloudy_blue_underwater',
+  'bg_final_019_yellow_morning_tide', 'bg_final_020_gray_rain_glass_water', 'bg_final_021_soft_coral_arch',
+  'bg_final_022_midnight_starry_water', 'bg_final_023_blue_grid_sea_tiles', 'bg_final_024_misty_lavender_depth',
+  'bg_final_025_warm_sticker_ocean', 'bg_final_026_sakura_tide_pool', 'bg_final_027_pearl_white_quiet',
+  'bg_final_028_soft_purple_sleep_sea', 'bg_final_029_mint_morning_bubbles', 'bg_final_030_deep_blue_receipt_night',
+  'bg_final_031_cotton_candy_water', 'bg_final_032_green_aquatic_notebook', 'bg_final_033_cream_pebble_bottom',
+  'bg_final_034_blue_rainbow_bubbles', 'bg_final_035_lavender_shell_corners',
+];
+
+// ── 결정적 선택: 같은 시드 → 항상 같은 장 (렌더마다 바뀌면 안 되는 곳엔 Math.random 금지) ──
+// 시드 예: 홈 배경 = 오늘 날짜(YYYYMMDD), 과거 어항 배경 = session.id
+export function pickBySeed(pool, seed) {
+  let h = 7;
+  for (const c of String(seed)) h = (h * 31 + c.charCodeAt(0)) % 100000;
+  return pool[h % pool.length];
+}
+
 // ── 지속시간 = 희귀도 사다리 (콘셉트 ③ 표 그대로, 룰=데이터) ──
 // min: 임계분 / count: 마리수 / ceiling: 천장 rarity / guarantee: 보장 rarity
 export const DURATION_TIERS = [
@@ -65,7 +117,7 @@ export const DURATION_TIERS = [
 
 export const GOAL_CHOICES = [15, 30, 60, 90, 120, 180]; // 홈 목표시간 선택지
 
-// ── 물고기 50종 (id=파일명 / 희귀도 배분: 흔함24·비범13·레어8·에픽4·전설1) ──
+// ── 물고기 90종 (id=파일명 / 희귀도 배분: 흔함43·비범23·레어15·에픽7·전설2) ──
 // tags: 시간대 태그 — 해당 시간대 세션에서 등장 가중치 ×2
 export const FISH = [
   // ─ 흔함 24 ─
@@ -123,6 +175,53 @@ export const FISH = [
   { id: 'fish_individual_rare_night_moon_right', name: '달그림자',     rarity: 'epic', tags: ['night'] },
   // ─ 전설 1 ─
   { id: 'fish_final_024_golden_legendary',       name: '황금비늘',     rarity: 'legendary' },
+
+  // ── 2차 배치 40종 (051~090): 흔함19·비범10·레어7·에픽3·전설1 ──
+  // ─ 흔함 19 ─
+  { id: 'fish_final_051_yellow_raincoat_fish',   name: '노랑우비',     rarity: 'common', tags: ['day'] },
+  { id: 'fish_final_052_pale_lime_boxfish',      name: '네모라임',     rarity: 'common' },
+  { id: 'fish_final_053_peach_sleepy_koi',       name: '선잠잉어',     rarity: 'common', tags: ['dawn'] },
+  { id: 'fish_final_054_blue_button_fish',       name: '파랑단추',     rarity: 'common' },
+  { id: 'fish_final_056_mint_sleepy_tadpole',    name: '꾸벅올챙이',   rarity: 'common', tags: ['dawn'] },
+  { id: 'fish_final_059_gray_sock_fish',         name: '양말치',       rarity: 'common' },
+  { id: 'fish_final_061_blueberry_puffer',       name: '베리복어',     rarity: 'common' },
+  { id: 'fish_final_065_coral_round_crab',       name: '동글게',       rarity: 'common' },
+  { id: 'fish_final_066_yellow_banana_fish',     name: '바나나치',     rarity: 'common', tags: ['day'] },
+  { id: 'fish_final_068_pink_candy_shrimp',      name: '사탕새우',     rarity: 'common' },
+  { id: 'fish_final_069_cream_pillow_fish',      name: '폭신베개',     rarity: 'common', tags: ['night'] },
+  { id: 'fish_final_072_blue_paperboat_fish',    name: '종이배',       rarity: 'common' },
+  { id: 'fish_final_073_cream_sleepy_shell_snail', name: '쿨쿨달팽이', rarity: 'common', tags: ['night'] },
+  { id: 'fish_final_078_blue_sleepy_sardine',    name: '새근정어리',   rarity: 'common', tags: ['night'] },
+  { id: 'fish_final_082_blue_scarf_fish',        name: '파랑목도리',   rarity: 'common' },
+  { id: 'fish_final_085_peach_bean_fish',        name: '복숭아콩',     rarity: 'common' },
+  { id: 'fish_final_088_yellow_pudding_fish',    name: '노랑푸딩',     rarity: 'common' },
+  { id: 'fish_final_089_lilac_sleepy_clam',      name: '잠꼬대조개',   rarity: 'common', tags: ['night'] },
+  { id: 'fish_final_090_mint_star_puffer',       name: '별사탕복어',   rarity: 'common' },
+  // ─ 비범 10 ─
+  { id: 'fish_final_055_purple_sleep_shell',     name: '자장소라',     rarity: 'uncommon', tags: ['night'] },
+  { id: 'fish_final_057_coral_flower_jelly',     name: '꽃해파리',     rarity: 'uncommon' },
+  { id: 'fish_final_062_peach_ribbon_eel',       name: '리본장어',     rarity: 'uncommon', tags: ['sunset'] },
+  { id: 'fish_final_075_mint_bubble_octopus',    name: '방울문어',     rarity: 'uncommon' },
+  { id: 'fish_final_076_yellow_lantern_fish',    name: '등불고기',     rarity: 'uncommon', tags: ['night'] },
+  { id: 'fish_final_077_coral_heart_crab',       name: '하트게',       rarity: 'uncommon', tags: ['sunset'] },
+  { id: 'fish_final_079_peach_fluffy_jelly',     name: '보들해파리',   rarity: 'uncommon' },
+  { id: 'fish_final_081_caramel_shell_turtle',   name: '달고나거북',   rarity: 'uncommon' },
+  { id: 'fish_final_084_mint_leaf_ray',          name: '잎새가오리',   rarity: 'uncommon' },
+  { id: 'fish_final_086_cream_ribbon_jelly',     name: '나풀해파리',   rarity: 'uncommon' },
+  // ─ 레어 7 ─
+  { id: 'fish_final_060_gold_star_tail_fish',    name: '금별꼬리',     rarity: 'rare', tags: ['night'] },
+  { id: 'fish_final_063_mint_crown_fish',        name: '민트왕관',     rarity: 'rare' },
+  { id: 'fish_final_064_lavender_orca_baby',     name: '아기범고래',   rarity: 'rare' },
+  { id: 'fish_final_067_pale_blue_angelfish',    name: '하늘나래',     rarity: 'rare' },
+  { id: 'fish_final_070_green_tea_turtle',       name: '말차거북',     rarity: 'rare' },
+  { id: 'fish_final_080_mint_sleepy_manta_baby', name: '졸음날개',     rarity: 'rare', tags: ['dawn'] },
+  { id: 'fish_final_087_blue_droplet_seahorse',  name: '물방울해마',   rarity: 'rare', tags: ['dawn'] },
+  // ─ 에픽 3 ─
+  { id: 'fish_final_058_white_mochi_whale',      name: '찹쌀고래',     rarity: 'epic', tags: ['dawn'] },
+  { id: 'fish_final_071_pink_mochi_axolotl',     name: '몽실도롱뇽',   rarity: 'epic' },
+  { id: 'fish_final_074_lilac_cloud_ray',        name: '구름가오리',   rarity: 'epic', tags: ['dawn'] },
+  // ─ 전설 1 ─
+  { id: 'fish_final_083_lavender_star_octopus',  name: '별지기문어',   rarity: 'legendary', tags: ['night'] },
 ];
 
 export const fishById = (id) => FISH.find((f) => f.id === id);

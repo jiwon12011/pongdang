@@ -3,7 +3,7 @@
 //   화면 연출은 screens/session.js가, 여기는 시간과 기록만 다룬다
 // ═══════════════════════════════════════════════════════════════
 
-import { timebandOf, TIMEBANDS } from './assets-data.js';
+import { AQUARIUM_EXTRA_TANKS, AQUARIUM_VARIANTS, timebandOf, TIMEBANDS } from './assets-data.js';
 import { drawForSession } from './gacha.js';
 import {
   getActiveSession, setActiveSession, addSession, addFish,
@@ -19,13 +19,17 @@ export { AQUARIUM_CAPACITY } from './state.js';
 // members: 같이 퐁당 시작 순간 입장자 이름([0]=나) — solo면 생략(undefined = JSON에서 필드 자체 생략)
 export function startSession({ goalMin = null, mode = 'solo', members = undefined, onboarding = false }) {
   const now = Date.now();
+  const timeband = timebandOf(new Date(now));
+  // 어항 변형: 시간대 고정 1 + 공용 8, 9개 균등 랜덤 — 시작 순간 1픽 후 세션에 고정
+  const tankPool = [AQUARIUM_VARIANTS[timeband].tank, ...AQUARIUM_EXTRA_TANKS];
   const active = {
     id: uid(),
     startedAt: now,
     goalMin: goalMin ?? null,
     mode,
     members: members?.length ? members : undefined,
-    timeband: timebandOf(new Date(now)), // 어항 변형은 시작 순간 기준
+    timeband,                            // 어항 변형·배경은 시작 순간 기준
+    tank: tankPool[Math.floor(Math.random() * tankPool.length)], // 이 세션의 어항 변형 id
     speed: speedFactor(),                // 시작 시점 배속 고정 (복원 일관성)
     onboarding,
   };
@@ -85,6 +89,7 @@ export function finishSession(active, { gaveUp = false } = {}) {
     durationMin,
     goalMin: active.goalMin,
     timeband: active.timeband,
+    tank: active.tank || undefined, // 이 세션의 어항 변형 — 구 activeSession(필드 없음)이면 생략, 렌더는 timeband 매핑 폴백
     tierName: tier?.name || null,
     mode: active.mode,
     members: active.members || undefined, // 구 activeSession(필드 없음)도 안전 — undefined는 저장 시 생략

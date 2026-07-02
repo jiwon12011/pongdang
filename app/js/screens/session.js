@@ -50,6 +50,18 @@ export function renderSession() {
   if (!active) { showScreen('home'); return; }
   const free = isFreeDive(active); // 자유 잠수: 종료 타이머 없음, 나가기 = 정상 종료
 
+  // ── 성능: 이 세션의 어항 변형(9개 랜덤 픽)을 유휴 시간에 미리 받는다 ──
+  // app.js 부팅 프리로드는 시간대 기본 변형만 알아서(픽은 startSession에서) 적중률 1/9 —
+  // 세션 화면은 저부하 구간이라 여기서 받아두면 종료 후 어항 스와이프 팝인이 없다.
+  // (신규 시작·새로고침 복원 둘 다 이 렌더를 지나므로 한 곳으로 충분)
+  if (active.tank) {
+    const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 1));
+    idle(() => {
+      [src.tankBack(active.tank), src.tankFront(active.tank)]
+        .forEach((url) => { new Image().src = url; });
+    });
+  }
+
   // ── DOM ──
   const timeEl = el('div', { class: 'session__time mono', 'aria-live': 'polite' });
   const sulkEl = el('div', { class: 'session__sulk' });

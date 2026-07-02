@@ -4,8 +4,8 @@
 // ═══════════════════════════════════════════════════════════════
 
 import {
-  AQUARIUM_VARIANTS, COPY, DEMO_FRIEND, GOAL_CHOICES, TIMEBANDS, WELCOME_FISH_ID,
-  fishById, timebandOf, src,
+  AQUARIUM_VARIANTS, COPY, DEMO_FRIEND, GOAL_CHOICES, HOME_BG_POOLS, TIMEBANDS, WELCOME_FISH_ID,
+  fishById, pickBySeed, timebandOf, src,
 } from '../assets-data.js';
 import { tierFor } from '../gacha.js';
 import { todaySummary, todayFishIds, getProfile } from '../state.js';
@@ -37,9 +37,12 @@ export function renderHome() {
   const wrap = el('div', { class: `home home--${band}` });
 
   // ── 시간대 배경 (현재 시간대 1장만 로드 — 프리로드 금지) + 상단 스크림 ──
+  // 날짜 시드 로테이션: 하루 종일 같은 장, 내일은 다른 장 (렌더마다 바뀌면 안 되니 Math.random 금지)
+  const d = new Date();
+  const dateSeed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate(); // YYYYMMDD
   wrap.append(
     // 풀블리드 배경 = 홈 LCP 요소 — JS 렌더라 발견이 늦으니 발견 즉시 대역폭을 우선 배정
-    el('img', { class: 'home__bg', src: src.bg(TIMEBANDS[band].homeBg), alt: '', 'aria-hidden': 'true', fetchpriority: 'high', decoding: 'async' }),
+    el('img', { class: 'home__bg', src: src.bg(pickBySeed(HOME_BG_POOLS[band], dateSeed)), alt: '', 'aria-hidden': 'true', fetchpriority: 'high', decoding: 'async' }),
     el('div', { class: 'home__scrim', 'aria-hidden': 'true' }),
   );
 
@@ -217,7 +220,7 @@ function buildRoomCard(profile) {
 
 function memberRow(name, isMe) {
   return el('div', { class: 'room-card__member' },
-    el('img', { src: src.icon('icon_final_004_friends'), alt: '' }),
+    el('img', { src: src.icon('icon_final_026_profile_face'), alt: '', width: '26', height: '26' }),
     el('span', {}, `${name}${isMe ? ' (나)' : ''}`),
   );
 }

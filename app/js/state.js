@@ -4,11 +4,12 @@
 //   pongdang.fish[]        { uid, speciesId, caughtAt, sessionId }
 //   pongdang.tank[]        개체 uid 배열 — 지금 어항 로스터 (순서 유지, cap 12)
 //   pongdang.sessions[]    { id, name, startedAt, endedAt, durationMin,
-//                            goalMin(null=자유 잠수), timeband, tierName, mode,
+//                            goalMin(null=자유 잠수), timeband, tank?, tierName, mode,
 //                            members[]?, fishIds[], attempt, stamp }
 //   pongdang.activeSession { startedAt, goalMin(null=자유 잠수), mode, members[]?,
-//                            timeband, speed, onboarding }
+//                            timeband, tank?, speed, onboarding }
 //   members[]?: 같이 퐁당 시작 순간 입장자 이름([0]=나) — solo·구세션엔 필드 없음
+//   tank?: 시작 시 뽑힌 어항 변형 id — 구세션엔 필드 없음(렌더는 timeband 매핑 폴백)
 // ═══════════════════════════════════════════════════════════════
 
 export const AQUARIUM_CAPACITY = 12; // 어항 수용량 (설계서 ⑥) — 로스터 cap

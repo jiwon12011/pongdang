@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
 // screens/collection.js — 도감 (설계서 ⑦)
-//   50종 그리드 · 최근 만난 순 · 필터(희귀도/시간대/미획득)
+//   전체 어종 그리드(FISH 기준 자동 확장) · 최근 만난 순 · 필터(희귀도/시간대/미획득)
 //   미획득 = 연필 스케치 근사(CSS 필터) · 카드 상세
 // ═══════════════════════════════════════════════════════════════
 
@@ -33,7 +33,13 @@ export function renderCollection() {
       el('span', { class: 'dex__count' }, `${owned.size} / ${FISH.length}`),
     ),
   );
-  if (!owned.size) wrap.append(el('p', { class: 'dex__empty-note' }, COPY.emptyCollection));
+  if (!owned.size) {
+    wrap.append(
+      // 빈 상태 아이콘 — 어항 빈 상태와 같은 문법 (shell 30px, 중앙)
+      el('img', { src: src.icon('icon_final_055_empty_state_shell'), alt: '', width: '30', height: '30', style: 'display:block;width:30px;margin:0 auto 8px;' }),
+      el('p', { class: 'dex__empty-note' }, COPY.emptyCollection),
+    );
+  }
 
   // ── 필터 칩: 전체 / 희귀도 5 / 시간대 4 / 미획득 ──
   const chips = el('div', { class: 'chip-row', role: 'group', 'aria-label': '도감 필터' });
@@ -73,7 +79,7 @@ export function renderCollection() {
       class: `dex-cell${has ? '' : ' dex-cell--unknown'}`,
       onclick: () => openDetail(f, owned.get(f.id)),
     },
-      el('img', { src: src.fish(f.id), alt: '', loading: 'lazy', width: '62', height: '62' }),
+      el('img', { src: src.fish(f.id), alt: '', loading: 'lazy', decoding: 'async', width: '62', height: '62' }),
       el('span', { class: 'dex-cell__name' }, has ? f.name : '???'),
     ));
   }

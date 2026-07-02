@@ -6,7 +6,8 @@
 // ═══════════════════════════════════════════════════════════════
 
 import {
-  COPY, AQUARIUM_VARIANTS, EDIT_UI, RECEIPT_UI, TIMEBANDS, timebandOf, fishById, src,
+  COPY, AQUARIUM_VARIANTS, EDIT_UI, PAST_TANK_BG_POOL, RECEIPT_UI, TIMEBANDS,
+  timebandOf, fishById, pickBySeed, src,
 } from '../assets-data.js';
 import { AQUARIUM_CAPACITY } from '../session.js';
 import {
@@ -28,10 +29,14 @@ const prefetched = new Set(); // 인접 어항 에셋 중복 프리페치 방지
 // ── 어항 목록: [지금 어항, ...물고기가 있는 과거 세션 어항] ──
 function buildTanks() {
   const roster = getTankFish(); // 로스터 순서 = 사용자가 꾸민 순서 (cap 12)
+  const nowBand = timebandOf();
   const tanks = [{
     name: '지금 어항',
-    meta: `${TIMEBANDS[timebandOf()].label} · ${roster.length}마리`,
-    timeband: timebandOf(),
+    meta: `${TIMEBANDS[nowBand].label} · ${roster.length}마리`,
+    timeband: nowBand,
+    // 지금 어항 = 실시간 시간대 매핑 유지 (시간대 정체성 보존 — 랜덤 없음)
+    tankId: AQUARIUM_VARIANTS[nowBand].tank,
+    bgId: AQUARIUM_VARIANTS[nowBand].bg,
     fishIds: roster.map((f) => f.speciesId),
     fish: roster, // 편집 모드 빼기용 개체 레코드(uid) — 과거 어항엔 없음
   }];
@@ -43,6 +48,10 @@ function buildTanks() {
       name: s.name,
       meta: `${fmtDate(s.startedAt)} · ${TIMEBANDS[s.timeband].label} · ${s.fishIds.length}마리`,
       timeband: s.timeband,
+      // 세션에 저장된 변형 우선, 구세션(tank 없음)은 기존 timeband 매핑 폴백
+      tankId: s.tank || AQUARIUM_VARIANTS[s.timeband].tank,
+      // 배경은 session.id 시드 결정적 선택 — 구세션도 스키마 추가 없이 자동 다양화
+      bgId: pickBySeed(PAST_TANK_BG_POOL, s.id),
       fishIds: s.fishIds,
       sessionId: s.id, // 지난 영수증 다시 보기용 — 지금 어항(집계)엔 없음
     });
@@ -67,7 +76,6 @@ function rerender() {
   if (tankIndex >= tanks.length) tankIndex = 0;
   const tank = tanks[tankIndex];
   const isHome = tankIndex === 0; // 지금 어항 = 편집 가능
-  const variant = AQUARIUM_VARIANTS[tank.timeband];
 
   const wrap = el('div', {
     class: `aquarium${tank.timeband === 'night' ? ' aquarium--night' : ''}${editMode ? ' aquarium--edit' : ''}`,
@@ -84,10 +92,10 @@ function rerender() {
 
   wrap.append(
     el('div', { class: 'aquarium__stage' },
-      el('img', { class: 'aquarium__bg', src: src.bg(variant.bg), alt: '' }),
-      el('img', { class: 'aquarium__tank-back', src: src.tankBack(variant.tank), alt: '' }),
+      el('img', { class: 'aquarium__bg', src: src.bg(tank.bgId), alt: '' }),
+      el('img', { class: 'aquarium__tank-back', src: src.tankBack(tank.tankId), alt: '' }),
       fishLayer,
-      el('img', { class: 'aquarium__tank-front', src: src.tankFront(variant.tank), alt: '' }),
+      el('img', { class: 'aquarium__tank-front', src: src.tankFront(tank.tankId), alt: '' }),
     ),
   );
 
@@ -98,7 +106,7 @@ function rerender() {
     wrap.append(
       el('div', { class: 'aquarium__empty' },
         el('img', { class: 'bubble-anim', src: src.decor('decor_final_004_bubble_cluster'), alt: '' }),
-        el('img', { src: src.decor('decor_final_005_gold_sparkle_star'), alt: '', style: 'width:30px;margin:0 auto 8px;' }),
+        el('img', { src: src.icon('icon_final_055_empty_state_shell'), alt: '', width: '30', height: '30', style: 'width:30px;margin:0 auto 8px;' }),
         el('p', {}, emptyMsg),
       ),
     );
@@ -117,7 +125,7 @@ function rerender() {
   let toolBtn;
   let syncEditBtn = () => {}; // 과거 어항에선 no-op (setEdit은 지금 어항에서만 불린다)
   if (isHome) {
-    const editIcon = el('img', { alt: '' });
+    const editIcon = el('img', { alt: '', width: '22', height: '22' }); // width/height 예약 — src 교체 시 CLS 방지
     toolBtn = el('button', {
       type: 'button',
       class: 'aquarium__edit-btn',
@@ -126,7 +134,7 @@ function rerender() {
     syncEditBtn = () => { // 초기 렌더·토글 공용 — 아이콘/aria를 editMode에 맞춘다
       toolBtn.setAttribute('aria-pressed', String(editMode));
       toolBtn.setAttribute('aria-label', editMode ? EDIT_UI.editDone : EDIT_UI.editBtn);
-      editIcon.src = editMode ? src.icon('icon_final_017_check_ok') : src.decor('decor_final_005_gold_sparkle_star');
+      editIcon.src = editMode ? src.icon('icon_final_017_check_ok') : src.icon('icon_final_047_palette_shell');
     };
     syncEditBtn();
   } else {
@@ -252,8 +260,7 @@ function prefetchNeighbors(tanks) {
     for (const i of [tankIndex - 1, tankIndex + 1]) {
       const t = tanks[i];
       if (!t) continue;
-      const v = AQUARIUM_VARIANTS[t.timeband];
-      for (const url of [src.bg(v.bg), src.tankBack(v.tank), src.tankFront(v.tank)]) {
+      for (const url of [src.bg(t.bgId), src.tankBack(t.tankId), src.tankFront(t.tankId)]) {
         if (prefetched.has(url)) continue;
         prefetched.add(url);
         new Image().src = url;
