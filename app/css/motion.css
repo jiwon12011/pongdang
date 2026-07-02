@@ -3,12 +3,6 @@
    prefers-reduced-motion이면 유영 정지·전환은 페이드로 전체 분기
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── 꾹 시작 파문 ── */
-@keyframes ripple-grow {
-  from { transform: scale(1); opacity: 0.9; }
-  to   { transform: scale(30); opacity: 0.35; }
-}
-
 /* ── 물고기 유영: 래퍼=좌우 왕복, 안쪽 flip 레이어=방향 전환 ──
    (반전을 래퍼에 걸면 이동분까지 거울에 비쳐 위치가 점프한다) */
 @keyframes swim-x {
@@ -147,11 +141,9 @@
   .wet-overlay__drop { display: none; }
   .receipt__paper--print { animation: none; }
   .plop-in { animation: plop-fade 0.3s ease both; }
-  .hold-ripple { animation-name: ripple-fade; }
 
-  .screen, .toast, .modal, .tabbar, .aquarium__ui, .aquarium__dots {
+  .screen, .toast, .modal, .tabbar, .aquarium__ui, .aquarium__dots, .aquarium__tray {
     transition-duration: 0.15s !important;
   }
 }
 @keyframes plop-fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes ripple-fade { from { opacity: 0.4; } to { opacity: 0.8; } }

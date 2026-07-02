@@ -1,9 +1,11 @@
 // ═══════════════════════════════════════════════════════════════
-// screens/settings.js — 설정: 닉네임 · 데모 배속(×60) · 데이터 초기화
+// screens/settings.js — 설정: 닉네임 · 데모 배속(×60) · 지난 영수증 · 데이터 초기화
 // ═══════════════════════════════════════════════════════════════
 
-import { getProfile, setProfile, resetAll } from '../state.js';
-import { $, el, confirmModal, toast, showScreen } from '../ui.js';
+import { RECEIPT_UI, TIMEBANDS, fishById, src } from '../assets-data.js';
+import { getProfile, setProfile, getSessions, resetAll } from '../state.js';
+import { $, el, confirmModal, toast, showScreen, withMono, fmtDate } from '../ui.js';
+import { openArchivedReceipt } from './receipt.js';
 
 export function renderSettings() {
   const root = $('[data-screen="settings"]');
@@ -46,6 +48,9 @@ export function renderSettings() {
         nickInput,
       ),
 
+      // 지난 영수증 — 데이터 초기화(위험 버튼)와 멀리 (designer 확정 순서)
+      buildReceiptListCard(),
+
       el('div', { class: 'glass-card settings__card' },
         el('div', { class: 'settings__row' },
           el('div', {},
@@ -79,5 +84,42 @@ export function renderSettings() {
 
       el('p', { class: 'settings__foot' }, '퐁당 프로토타입 v0.1 — 물결이 잠깐 흐려지면, 곧 맑아질 거야'),
     ),
+  );
+}
+
+// ── 지난 영수증 목록 — 물고기를 데려온 세션만, 최신순 ──
+// 탭하면 어항과 같은 다시 보기 화면 — 복귀는 origin: 'settings'로 여기로 돌아온다
+function buildReceiptListCard() {
+  const receipts = getSessions().filter((s) => s.fishIds?.length > 0).reverse();
+  return el('div', { class: 'glass-card settings__card' },
+    el('div', { class: 'settings__label' }, RECEIPT_UI.archiveListTitle),
+    receipts.length
+      ? [
+        el('div', { class: 'settings__desc' }, RECEIPT_UI.archiveListDesc),
+        el('div', { class: 'settings__receipts' }, receipts.map(receiptItem)),
+      ]
+      : el('div', { class: 'settings__desc' }, RECEIPT_UI.archiveListEmpty),
+  );
+}
+
+function receiptItem(s) {
+  const top = fishById(s.fishIds[0]); // 정산 때 레어 우선 정렬 — [0]이 CATCH OF THE DAY
+  return el('button', {
+    type: 'button',
+    class: 'settings__receipt-item',
+    onclick: () => {
+      if (openArchivedReceipt(s.id, { origin: 'settings' })) showScreen('receipt');
+    },
+  },
+    // width/height 명시 = lazy 이미지 로드 전에도 행 높이 확정 (CLS 방지)
+    top
+      ? el('img', { class: 'settings__receipt-thumb', src: src.fish(top.id), alt: '', width: 44, height: 44, loading: 'lazy', decoding: 'async' })
+      : el('span', { class: 'settings__receipt-thumb', 'aria-hidden': 'true' }),
+    el('span', { class: 'settings__receipt-text' },
+      el('span', { class: 'settings__receipt-name' }, s.name),
+      el('span', { class: 'settings__receipt-meta' },
+        withMono(`${fmtDate(s.startedAt)} · ${TIMEBANDS[s.timeband].label} · ${s.fishIds.length}마리`)),
+    ),
+    el('span', { class: 'settings__receipt-chevron', 'aria-hidden': 'true' }, '›'),
   );
 }

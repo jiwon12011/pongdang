@@ -7,21 +7,24 @@ import { timebandOf, TIMEBANDS } from './assets-data.js';
 import { drawForSession } from './gacha.js';
 import {
   getActiveSession, setActiveSession, addSession, addFish,
-  getFish, speedFactor, uid,
+  speedFactor, uid,
 } from './state.js';
 import { fmtDate } from './ui.js';
 
-export const AQUARIUM_CAPACITY = 12; // 어항 수용량 (설계서 ⑥)
+// 어항 수용량 — 실체는 state.js(로스터 cap과 한 몸), 기존 import 경로 호환용 재수출
+export { AQUARIUM_CAPACITY } from './state.js';
 
 // 세션 시작 — activeSession 저장(새로고침 복원용)
 // goalMin: null(또는 생략) = 자유 잠수 — 시간 제한 없이, 나가기가 정상 종료
-export function startSession({ goalMin = null, mode = 'solo', onboarding = false }) {
+// members: 같이 퐁당 시작 순간 입장자 이름([0]=나) — solo면 생략(undefined = JSON에서 필드 자체 생략)
+export function startSession({ goalMin = null, mode = 'solo', members = undefined, onboarding = false }) {
   const now = Date.now();
   const active = {
     id: uid(),
     startedAt: now,
     goalMin: goalMin ?? null,
     mode,
+    members: members?.length ? members : undefined,
     timeband: timebandOf(new Date(now)), // 어항 변형은 시작 순간 기준
     speed: speedFactor(),                // 시작 시점 배속 고정 (복원 일관성)
     onboarding,
@@ -84,6 +87,7 @@ export function finishSession(active, { gaveUp = false } = {}) {
     timeband: active.timeband,
     tierName: tier?.name || null,
     mode: active.mode,
+    members: active.members || undefined, // 구 activeSession(필드 없음)도 안전 — undefined는 저장 시 생략
     fishIds: fish.map((f) => f.id),
     attempt,
     stamp: !!tier?.stamp,
@@ -91,12 +95,13 @@ export function finishSession(active, { gaveUp = false } = {}) {
   };
   addSession(session);
 
-  // 어항 수용량 초과 여부 — 새 물고기가 들어오면 오래된 애들이 옛 어항으로 "이사"
-  const before = getFish().length;
+  // 어항 초과 여부 = 로스터에서 실제로 밀려난 마릿수 기반 —
+  // 사용자가 미리 빼서 자리가 있으면 overflow 아님 (총 보유 수와 무관)
+  let overflowed = false;
   if (fish.length) {
-    addFish(fish.map((f) => ({ speciesId: f.id, caughtAt: session.endedAt, sessionId: session.id })));
+    const evicted = addFish(fish.map((f) => ({ speciesId: f.id, caughtAt: session.endedAt, sessionId: session.id })));
+    overflowed = evicted > 0;
   }
-  const overflowed = before <= AQUARIUM_CAPACITY && before + fish.length > AQUARIUM_CAPACITY;
 
   setActiveSession(null);
   return { session, fish, overflowed };

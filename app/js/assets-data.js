@@ -151,6 +151,50 @@ export const COPY = {
   onboardingHint: '화면은 켜둔 채, 그냥 뒤집어 두면 돼.',
 };
 
+// 같이 퐁당 로컬 시뮬 가짜 친구 이름 (프로토 임시 — 실제 동기화 붙으면 제거)
+export const DEMO_FRIEND = '동동이';
+
+// ── 지난 영수증·간직하기 카피 (designer 확정 스펙) — 문자열 수정은 여기 한 곳 ──
+export const RECEIPT_UI = {
+  saveReceipt: '간직하기',                        // 영수증 이미지 저장 버튼
+  saving: '간직하는 중…',                         // 저장 진행 중 버튼 라벨
+  saveDone: '앨범에 퐁당, 잘 넣어뒀어.',           // 저장 성공 토스트
+  saveFail: '앗, 잘 안 됐어. 다시 한번 눌러줄래?', // 캡처/CDN 실패 토스트
+  backToAquarium: '어항으로 돌아가기',             // 지난 영수증 → 어항 복귀 버튼
+  viewReceipt: '이 시간의 영수증 다시 보기',       // 어항 헤더 영수증 버튼 aria-label
+  archiveBadge: '지난 영수증',                    // 종이 우상단 스탬프 뱃지
+  nameAskArchive: '이름은 언제든 고쳐도 돼',       // archive 이름 입력 보조 카피
+  // ── 동행자·지난 영수증 목록 (designer 확정 스펙) ──
+  withLabel: 'WITH',                              // 동행자 행 라벨
+  withFallback: '같이 퐁당',                       // 구세션(members 없음) together 폴백
+  withMore: (n) => ` ${n}명 더`,                   // 동행자 4명+ 꼬리: "동동이, 미미랑 2명 더"
+  backToSettings: '설정으로 돌아가기',             // 설정에서 연 지난 영수증 복귀 버튼 (임시 — designer 확정 대기)
+  archiveListTitle: '지난 영수증',                 // 설정 목록 카드 제목
+  archiveListDesc: '탭하면 그 시간의 영수증을 다시 뽑아줄게', // 목록 보조 카피
+  archiveListEmpty: '아직 간직한 시간이 없어. 첫 퐁당이 끝나면 여기부터 쌓일 거야.', // 빈 상태
+  // 파일명: 퐁당_7월2일_노을.png
+  receiptFileName: (session) => {
+    const d = new Date(session.startedAt);
+    return `퐁당_${d.getMonth() + 1}월${d.getDate()}일_${TIMEBANDS[session.timeband].label}.png`;
+  },
+};
+
+// ── 어항 꾸미기(편집 모드) 카피 (designer 확정 스펙) — 문자열 수정은 여기 한 곳 ──
+export const EDIT_UI = {
+  editBtn: '어항 꾸미기',                          // 꾸미기 버튼 aria-label (기본)
+  editDone: '꾸미기 끝내기',                       // 꾸미기 버튼 aria-label (편집 중)
+  editHint: '물고기를 톡 하면 잠깐 쉬러 가',        // 편집 중 안내 필
+  removeFish: (name) => `${name} 빼기`,            // 어항 물고기 버튼 aria-label
+  addFish: (name) => `${name} 넣기`,               // 트레이 아이템 aria-label
+  removeToast: (name) => `${name}, 잠깐 쉬러 갔어`,
+  addToast: (name) => `${name}, 퐁당! 다시 왔어`,
+  fullToast: '어항이 꽉 찼어. 한 마리 쉬게 해줄래?',
+  emptyByEdit: '다들 쉬는 중이야. 아래에서 한 마리 불러올래?', // 로스터 0 + 벤치 있음 (물고기 자체가 없으면 COPY.emptyAquarium)
+  trayLabel: '쉬는 중',                            // 트레이 캡션
+  trayEmpty: '지금은 다들 어항에 있어',             // 트레이 빈 상태
+  trayAria: '쉬는 중인 물고기',                     // 트레이 role=group aria-label
+};
+
 // ── "오늘의 한 줄" 서정 카피 템플릿 (시간대·티어 조합, 12개) ──
 // {n}=닉네임 자리는 안 씀 — 물고기 시점 반말 유지
 export const DAILY_LINES = {

@@ -4,18 +4,19 @@
 // ═══════════════════════════════════════════════════════════════
 
 import {
-  AQUARIUM_VARIANTS, COPY, GOAL_CHOICES, TIMEBANDS, WELCOME_FISH_ID,
+  AQUARIUM_VARIANTS, COPY, DEMO_FRIEND, GOAL_CHOICES, TIMEBANDS, WELCOME_FISH_ID,
   fishById, timebandOf, src,
 } from '../assets-data.js';
 import { tierFor } from '../gacha.js';
 import { todaySummary, todayFishIds, getProfile } from '../state.js';
-import { $, el, holdToStart, showScreen, toast, fmtMin, withMono } from '../ui.js';
+import { $, el, showScreen, toast, fmtMin, withMono } from '../ui.js';
 import { startSession } from '../session.js';
 
 // 화면 로컬 상태 (렌더 사이 유지)
 let goalMin = 30;
 let mode = 'solo'; // 'solo' | 'together'
 let roomTimer = null;
+let roomMembers = null; // 같이 퐁당 현재 입장자 이름([0]=나) — 시작 시점 스냅숏용
 
 const GREETINGS = {
   dawn: '새벽 물은 유난히 잔잔해.',
@@ -80,8 +81,13 @@ export function renderHome() {
     togetherBtn.classList.toggle('home__mode--on', mode === 'together');
     roomSlot.innerHTML = '';
     clearTimeout(roomTimer);
+    roomMembers = null; // 방을 벗어나면 입장자 리셋 — together면 buildRoomCard가 다시 채운다
     if (mode === 'together') roomSlot.append(buildRoomCard(profile));
   }
+
+  // 시작 순간의 입장자 스냅숏 — 이후 타이머가 친구를 추가해도 이 세션 기록은 안 변한다
+  const membersSnapshot = () =>
+    (mode === 'together' && roomMembers ? [...roomMembers] : undefined);
 
   // ── 목표시간 ──
   wrap.append(el('p', { class: 'home__goal-label' }, '얼마나 잠수할래?'));
@@ -101,18 +107,22 @@ export function renderHome() {
   }
   wrap.append(goals);
 
-  // ── 2초 꾹 시작 버튼 (수면) — 기포 3개가 올라온다 ──
-  const startBtn = el('button', { type: 'button', class: 'home__start', 'aria-label': `${COPY.start} — 2초 꾹 누르면 시작` },
+  // ── 시작 버튼 (수면) — 기포 3개가 올라온다. 탭 즉시 시작 ──
+  const startBtn = el('button', {
+    type: 'button',
+    class: 'home__start',
+    'aria-label': COPY.start,
+    onclick: () => {
+      startSession({ goalMin, mode, members: membersSnapshot() });
+      showScreen('session');
+    },
+  },
     el('span', { class: 'home__bubble home__bubble--1', 'aria-hidden': 'true' }),
     el('span', { class: 'home__bubble home__bubble--2', 'aria-hidden': 'true' }),
     el('span', { class: 'home__bubble home__bubble--3', 'aria-hidden': 'true' }),
     el('span', { class: 'home__start-main' }, COPY.start),
-    el('span', { class: 'home__start-sub' }, '2초 꾹 누르면 물속으로'),
+    el('span', { class: 'home__start-sub' }, '누르면 바로 물속으로'),
   );
-  holdToStart(startBtn, () => {
-    startSession({ goalMin, mode });
-    showScreen('session');
-  });
   wrap.append(startBtn);
 
   // ── 자유 잠수: 일반 탭 즉시 시작 (목표 시간 없음) ──
@@ -122,7 +132,7 @@ export function renderHome() {
       class: 'home__free',
       'aria-label': '자유 잠수 시작 — 목표 시간 없이',
       onclick: () => {
-        startSession({ goalMin: null, mode });
+        startSession({ goalMin: null, mode, members: membersSnapshot() });
         showScreen('session');
       },
     }, '재지 말고, 그냥 퐁당 →'),
@@ -148,8 +158,9 @@ function buildHero(band) {
       fishLayer,
       el('img', { src: src.tankFront(variant.tank), alt: '', decoding: 'async' }),
     ),
-    el('p', { class: 'home__hero-caption' },
-      ids.length ? '오늘 만난 애들이야. 더 데려올래?' : '오늘의 첫 퐁당, 기다리고 있어.'),
+    ids.length
+      ? el('p', { class: 'home__hero-caption' }, '오늘 만난 애들이야.', el('br'), '더 데려올래?')
+      : el('p', { class: 'home__hero-caption' }, '오늘의 첫 퐁당,', el('br'), '기다리고 있어.'),
   );
 }
 
@@ -183,15 +194,18 @@ function heroFish(speciesId, index, { welcome = false } = {}) {
 }
 
 // 방 코드 카드 — 실제 동기화 없음, 친구가 들어오는 척만 (프로토)
+// 입장자 명단은 roomMembers(모듈 로컬)에도 반영 — 시작 시점에 세션으로 스냅숏된다
 function buildRoomCard(profile) {
   const code = String(Math.floor(100000 + Math.random() * 900000));
+  roomMembers = [profile.nickname || '나'];
   const members = el('div', { class: 'room-card__members' },
-    memberRow(profile.nickname || '나', true),
+    memberRow(roomMembers[0], true),
   );
   // 2.5초 뒤 가짜 친구 입장 (로컬 시뮬)
   roomTimer = setTimeout(() => {
-    members.append(memberRow('동동이', false));
-    toast('동동이가 풍덩 들어왔어');
+    roomMembers.push(DEMO_FRIEND);
+    members.append(memberRow(DEMO_FRIEND, false));
+    toast(`${DEMO_FRIEND}가 풍덩 들어왔어`);
   }, 2500);
 
   return el('div', { class: 'glass-card room-card' },

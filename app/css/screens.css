@@ -104,6 +104,7 @@
   line-height: 1.45;
   text-align: center;
   color: var(--ink);
+  word-break: keep-all; /* 어절 중간에서 안 끊기게 */
   border-radius: var(--wobble-sm);
 }
 
@@ -148,7 +149,7 @@
 }
 .goal-chip__tier { display: block; font-family: var(--font-hand); font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
 
-/* 2초 꾹 시작 버튼 — 수면. 파문이 여기서 인다 */
+/* 시작 버튼 — 수면. 탭 즉시 퐁당 */
 .home__start {
   position: relative;
   overflow: hidden;
@@ -166,12 +167,11 @@
   gap: 6px;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
 }
+.home__start:active { transform: scale(0.975); } /* 탭 눌림 피드백 */
 .home__start-main { font-family: var(--font-hand); font-size: 32px; font-weight: 700; }
 .home__start-sub { font-size: 13px; font-weight: 600; }
-.hold--charging { transform: scale(0.975); }
 
 /* 시작 버튼 기포 3개 — motion.css bubble-rise 재사용 */
 .home__bubble {
@@ -217,18 +217,6 @@
   .home__goals { display: flex; overflow-x: auto; }
   .goal-chip { flex: 0 0 30%; }
   .home__start { min-height: 96px; }
-}
-
-/* 누른 자리 파문: hold 시간 동안 퍼진다 */
-.hold-ripple {
-  position: absolute;
-  width: 20px; height: 20px;
-  margin: -10px 0 0 -10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-  pointer-events: none;
-  animation: ripple-grow linear forwards;
 }
 
 /* 같이 퐁당 — 방 코드 카드 */
@@ -281,11 +269,11 @@
   font-family: var(--font-hand);
   font-size: 24px;
   font-weight: 700;
-  touch-action: none;
   user-select: none;
   -webkit-user-select: none;
+  transition: transform 0.15s ease;
 }
-.onboarding__btn-sub { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 600; opacity: 0.8; }
+.onboarding__btn:active { transform: scale(0.97); } /* 탭 눌림 피드백 */
 /* 보조 링크 — 메인 CTA를 죽이지 않는 조용한 텍스트 버튼 (designer 확정 스펙) */
 .onboarding__browse {
   display: inline-flex;
@@ -463,7 +451,7 @@
 .receipt__paper-clip {
   position: relative;
   width: min(100%, 380px);
-  max-height: calc(100dvh - 40px);
+  max-height: calc(var(--app-h) - 40px);
   overflow: hidden;
   border-radius: var(--wobble-lg);
 }
@@ -477,19 +465,19 @@
     radial-gradient(circle 4px at calc(100% - 24px) calc(100% - 26px), rgba(255, 138, 101, 0.55) 98%, transparent),
     #FDFAF4;
   border: 3px solid rgba(46, 75, 143, 0.5);
-  border-bottom: none; /* 밑단은 ::after 지그재그가 대신함 */
+  border-bottom: none; /* 밑단은 .receipt__zigzag 지그재그가 대신함 */
   border-radius: var(--wobble-lg);
   padding: 28px 24px 36px;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--ink);
   overflow-y: auto;
-  max-height: calc(100dvh - 40px);
+  max-height: calc(var(--app-h) - 40px);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
 }
-/* 영수증 밑단 지그재그 절취선 */
-.receipt__paper-clip::after {
-  content: '';
+/* 영수증 밑단 지그재그 절취선 — pseudo-element가 아니라 실제 요소:
+   "간직하기" 캡처(html2canvas)에서 빠지지 않게 (JS가 paper-clip 안에 넣는다) */
+.receipt__zigzag {
   position: absolute;
   left: 3px; right: 3px; bottom: 0;
   height: 12px;
@@ -502,7 +490,7 @@
 .receipt__rule { border: none; border-top: 2px dashed rgba(58, 54, 48, 0.25); margin: 4px 0; }
 .receipt__row { display: flex; justify-content: space-between; gap: 10px; }
 .receipt__row dt { color: var(--ink-soft); }
-.receipt__row dd { font-weight: 600; }
+.receipt__row dd { font-weight: 600; text-align: right; word-break: keep-all; } /* WITH 동행자 줄바꿈 시 이름 안 쪼개지게 */
 .receipt__section-label {
   text-align: center;
   font-size: 11px;
@@ -574,8 +562,32 @@
   padding: 4px 12px;
   transform: rotate(-6deg);
 }
-.receipt__btns { display: flex; gap: 8px; margin-top: 8px; }
+/* 버튼 영역: 간직하기 풀폭 행 + 이동 행, 행간 8px — 캡처(간직하기)에선 통째로 빠진다 */
+.receipt__actions { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.receipt__btns { display: flex; gap: 8px; }
 .receipt__btns .btn { flex: 1; font-family: var(--font-body); font-size: 14px; min-height: 44px; }
+.receipt__save-row .btn { width: 100%; font-family: var(--font-body); font-size: 14px; min-height: 44px; }
+/* "지난 영수증" 스탬프 뱃지 — archive 모드 종이 우상단 */
+.receipt__archive-badge {
+  position: absolute;
+  top: 16px; right: 18px;
+  transform: rotate(5deg);
+  font-family: var(--font-hand);
+  font-size: 13px;
+  color: var(--ink-soft);
+  border: 2px dashed rgba(58, 54, 48, 0.3);
+  border-radius: var(--wobble-sm);
+  padding: 3px 10px;
+}
+/* 캡처 전용: 이름 입력을 치환한 정적 텍스트 (js가 onclone에서 만든다 — 캐럿·회색 placeholder 방지) */
+.receipt__name-print {
+  border-bottom: 2px dashed rgba(58, 54, 48, 0.35);
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 22px;
+  padding: 4px 8px;
+  color: var(--ink);
+}
 
 /* ─────────────── 어항 (물속) ─────────────── */
 .aquarium {
@@ -647,6 +659,7 @@
 .aquarium__meta { font-size: 12px; color: var(--ink-soft); } /* 숫자만 .mono span으로 */
 .aquarium__nav { display: flex; gap: 4px; }
 .aquarium__nav button {
+  position: relative; /* ::before 히트 확장 기준 */
   width: 38px; height: 38px;
   display: grid; place-items: center;
   font-size: 17px;
@@ -655,7 +668,19 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: var(--wobble-sm);
 }
+/* 38px 버튼의 터치 타깃을 44×44로 확장 (‹ › · 영수증 공통) */
+.aquarium__nav button::before { content: ''; position: absolute; inset: -3px; }
 .aquarium__nav button:disabled { opacity: 0.3; cursor: default; }
+/* 도구 버튼(꾸미기/영수증) — 같은 슬롯 공유(상호 배타), gap 4px과 합쳐 ‹ › 와 8px 분리 */
+.aquarium__receipt-btn,
+.aquarium__edit-btn { margin-right: 4px; }
+.aquarium__receipt-btn img,
+.aquarium__edit-btn img { width: 22px; height: 22px; object-fit: contain; display: block; }
+/* 편집 중 눌림 상태 — 물색 배경 + 체크 아이콘 (JS가 아이콘 스왑) */
+.aquarium__edit-btn[aria-pressed="true"] {
+  background: rgba(168, 216, 234, 0.85);
+  border: 2px solid rgba(138, 198, 209, 0.6);
+}
 .aquarium__dots {
   position: absolute;
   bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 26px);
@@ -712,6 +737,134 @@
   -webkit-backdrop-filter: blur(6px);
   border-radius: var(--wobble-md);
   padding: 14px 18px;
+}
+
+/* ── 꾸미기(편집) 모드 — 지금 어항 전용 ── */
+/* 편집 프레임: 딤 대신 점선 테두리로 "만질 수 있는 상태"를 알린다 */
+.aquarium--edit .aquarium__stage::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+  border-radius: var(--wobble-lg);
+  pointer-events: none;
+}
+/* 편집 중엔 물고기가 버튼 — 레이어 클릭 차단 해제 (aria-hidden은 JS가 함께 토글) */
+.aquarium--edit .aquarium__fish-layer { pointer-events: auto; }
+.swim-fish__btn {
+  position: relative; /* ::before 히트 확장 기준 */
+  display: block;
+  width: fit-content;
+}
+.swim-fish__btn::before { content: ''; position: absolute; inset: -4px; }
+/* 빼기 퇴장: 둥실(bob)을 멈추고 페이드+축소 — transform 애니와 안 싸우게 img에만 */
+.swim-fish--out img {
+  animation: none;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+/* 넣기 등장: plop-in 키프레임 재사용 — 끝나면 JS가 클래스를 떼서 bob 복귀 */
+.swim-fish--in img { animation: plop-in 0.8s cubic-bezier(0.3, 1.3, 0.5, 1) both; }
+
+/* 안내 필: 헤더 아래 중앙 — 빈 어항 카피와 같은 미니 글래스 레시피 */
+.aquarium__edit-hint {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 88px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 82%;
+  z-index: 5;
+  font-family: var(--font-hand);
+  font-size: 15px;
+  color: var(--ink);
+  text-align: center;
+  background: rgba(255, 252, 246, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: var(--wobble-md);
+  padding: 8px 14px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0s 0.35s;
+}
+.aquarium--edit .aquarium__edit-hint {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease, visibility 0s;
+}
+
+/* 보관 트레이: 쉬는 중(벤치) 물고기 가로 스크롤 — 편집 중에만 떠오른다 */
+.aquarium__tray {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 22px);
+  z-index: 6;
+  padding: 10px 14px;
+  opacity: 0;
+  transform: translateY(14px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s 0.35s;
+}
+.aquarium--edit .aquarium__tray {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s;
+}
+.aquarium__tray-label {
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+.aquarium__tray-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none; /* 스크롤바 숨김 (Firefox) */
+}
+.aquarium__tray-row::-webkit-scrollbar { display: none; }
+.aquarium__tray-item {
+  flex: none;
+  width: 64px;
+  height: 72px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--wobble-sm);
+}
+.aquarium__tray-item img { width: 48px; height: 48px; object-fit: contain; display: block; }
+.aquarium__tray-item span {
+  display: block;
+  max-width: 62px;
+  font-size: 11px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.aquarium__tray-item--out { opacity: 0; transition: opacity 0.2s ease; }
+.aquarium__tray-empty {
+  height: 72px; /* 빈 상태에도 트레이 높이 유지 */
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* 편집 중 점(dots) 숨김 — 물멍과 같은 opacity+visibility 패턴, 0.35s */
+.aquarium--edit .aquarium__dots {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0s 0.35s;
 }
 
 /* ─────────────── 도감 ─────────────── */
@@ -801,6 +954,43 @@
   background: rgba(255, 255, 255, 0.7);
 }
 .settings__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* 지난 영수증 목록 (designer 확정 스펙) */
+/* max-height 264px = 다섯 번째 아이템이 반쯤 잘리는 높이 — 스크롤 어포던스 */
+.settings__receipts { display: flex; flex-direction: column; max-height: 264px; overflow-y: auto; }
+.settings__receipt-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px; /* 터치 타깃 */
+  padding: 8px 2px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: var(--wobble-sm);
+}
+.settings__receipt-item:active { background: rgba(255, 255, 255, 0.55); border-radius: var(--wobble-sm); }
+.settings__receipt-item + .settings__receipt-item { border-top: 1.5px dashed rgba(58, 54, 48, 0.15); }
+.settings__receipt-thumb {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(58, 54, 48, 0.08);
+  border-radius: var(--wobble-sm);
+}
+.settings__receipt-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.settings__receipt-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.settings__receipt-meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.settings__receipt-chevron { flex: none; font-size: 16px; color: var(--ink-faint); } /* 장식 전용 — 정보 텍스트엔 faint 금지 */
 /* 토글 */
 .toggle { position: relative; width: 52px; height: 30px; flex: 0 0 auto; }
 .toggle input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1; }

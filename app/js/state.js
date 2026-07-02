@@ -1,16 +1,22 @@
 // ═══════════════════════════════════════════════════════════════
 // state.js — localStorage 스키마(설계서 ⑩)와 상태 접근자
 //   pongdang.profile       { nickname, onboarded, demoSpeed }
-//   pongdang.fish[]        { speciesId, caughtAt, sessionId }
+//   pongdang.fish[]        { uid, speciesId, caughtAt, sessionId }
+//   pongdang.tank[]        개체 uid 배열 — 지금 어항 로스터 (순서 유지, cap 12)
 //   pongdang.sessions[]    { id, name, startedAt, endedAt, durationMin,
 //                            goalMin(null=자유 잠수), timeband, tierName, mode,
-//                            fishIds[], attempt, stamp }
-//   pongdang.activeSession { startedAt, goalMin(null=자유 잠수), mode, timeband, speed, onboarding }
+//                            members[]?, fishIds[], attempt, stamp }
+//   pongdang.activeSession { startedAt, goalMin(null=자유 잠수), mode, members[]?,
+//                            timeband, speed, onboarding }
+//   members[]?: 같이 퐁당 시작 순간 입장자 이름([0]=나) — solo·구세션엔 필드 없음
 // ═══════════════════════════════════════════════════════════════
+
+export const AQUARIUM_CAPACITY = 12; // 어항 수용량 (설계서 ⑥) — 로스터 cap
 
 const KEYS = {
   profile: 'pongdang.profile',
   fish: 'pongdang.fish',
+  tank: 'pongdang.tank',
   sessions: 'pongdang.sessions',
   active: 'pongdang.activeSession',
 };
@@ -40,11 +46,52 @@ export function setProfile(patch) {
 export function getFish() {
   return read(KEYS.fish, []);
 }
+// 새 물고기 기록 + 지금 어항 로스터 자동 입장.
+// 로스터가 꽉 차면 최고참(배열 앞)부터 밀려남 — 밀려난 마릿수 반환(overflow 토스트용).
+// 사용자가 미리 빼서 자리를 만들어 뒀으면 0 (= overflow 아님).
 export function addFish(entries) {
-  write(KEYS.fish, [...getFish(), ...entries]);
+  const withUid = entries.map((e) => (e.uid ? e : { ...e, uid: uid() }));
+  write(KEYS.fish, [...getFish(), ...withUid]);
+  const roster = [...getTank(), ...withUid.map((f) => f.uid)];
+  const evicted = Math.max(0, roster.length - AQUARIUM_CAPACITY);
+  setTank(roster.slice(evicted));
+  return evicted;
 }
 export function ownedSpeciesIds() {
   return new Set(getFish().map((f) => f.speciesId));
+}
+
+// ── 지금 어항 로스터 (큐레이션 계층) ──
+export function getTank() {
+  return read(KEYS.tank, []);
+}
+function setTank(uids) {
+  write(KEYS.tank, uids);
+}
+// 로스터 순서대로 fish 레코드 — 죽은 uid(삭제·유실)는 방어적으로 필터
+export function getTankFish() {
+  const byUid = new Map(getFish().map((f) => [f.uid, f]));
+  return getTank().map((u) => byUid.get(u)).filter(Boolean);
+}
+// 로스터 밖 개체들 (보관 트레이용) — 최신순
+export function getBenchFish() {
+  const inTank = new Set(getTank());
+  return getFish().filter((f) => !inTank.has(f.uid)).reverse();
+}
+// 어항에 넣기 — cap·중복 검사, 성공 여부 반환
+export function addToTank(fishUid) {
+  const roster = getTank();
+  if (roster.length >= AQUARIUM_CAPACITY || roster.includes(fishUid)) return false;
+  setTank([...roster, fishUid]);
+  return true;
+}
+// 어항에서 빼기 — 있었으면 true
+export function removeFromTank(fishUid) {
+  const roster = getTank();
+  const next = roster.filter((u) => u !== fishUid);
+  if (next.length === roster.length) return false;
+  setTank(next);
+  return true;
 }
 
 // ── 세션 기록 ──
@@ -102,7 +149,21 @@ export function resetAll() {
   Object.values(KEYS).forEach((k) => localStorage.removeItem(k));
 }
 
-// 고유 id (세션용)
+// 고유 id (세션·개체용)
 export function uid() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 }
+
+// ── 마이그레이션 (1회·멱등) ──
+// 로드마다 재계산해 덮어쓰면 사용자 큐레이션이 소실된다 — 절대 금지.
+// 로스터 초기화는 pongdang.tank "키 자체가 없을 때"만: 빈 배열도 유효한 큐레이션이다.
+export function migrate() {
+  const fish = getFish();
+  if (fish.some((f) => !f.uid)) {
+    write(KEYS.fish, fish.map((f) => (f.uid ? f : { ...f, uid: uid() })));
+  }
+  if (localStorage.getItem(KEYS.tank) === null) {
+    setTank(getFish().slice(-AQUARIUM_CAPACITY).map((f) => f.uid));
+  }
+}
+if (typeof localStorage !== 'undefined') migrate(); // 앱 로드 시 1회 (테스트는 명시 호출)

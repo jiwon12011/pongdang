@@ -33,6 +33,10 @@
 
   --tabbar-h: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* 앱 높이 — 데스크톱 미디어쿼리에서 폰 프레임 높이로 재정의 */
+  --app-h: 100dvh;
+  --wobble-phone: 44px 50px 42px 52px / 50px 42px 52px 44px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,10 +77,55 @@ input { font: inherit; color: inherit; }
 /* ── 앱 프레임: 모바일 퍼스트, 데스크톱에선 폰 폭으로 중앙 정렬 ── */
 .app {
   position: relative;
-  height: 100dvh;
+  height: var(--app-h);
   max-width: 520px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+/* ── 데스크톱: 손그림 폰 프레임 (CSS-only, DOM 변경 없음) ── */
+@media (min-width: 768px) {
+  :root { --app-h: min(860px, calc(100dvh - 64px)); }
+
+  body {
+    display: grid;
+    place-content: center; /* 캡션(body::after)까지 묶어 세로 센터 유지 */
+    justify-items: center;
+    row-gap: 18px;
+    background: linear-gradient(180deg, var(--cream) 0%, #EAF4F8 45%, #CDE7F2 100%);
+  }
+
+  .app {
+    height: var(--app-h);
+    aspect-ratio: 9 / 19.5;
+    width: auto;
+    border: 10px solid var(--cream-2);
+    border-radius: var(--wobble-phone);
+    box-shadow:
+      0 0 0 2.5px rgba(46, 75, 143, 0.5),
+      0 30px 70px -20px rgba(46, 75, 143, 0.25),
+      0 10px 24px rgba(120, 100, 80, 0.12);
+  }
+
+  /* 잉크 라인 오버레이 — 모달(70)·토스트(60)보다 위 */
+  .app::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 80;
+    pointer-events: none;
+    border: 2px solid rgba(46, 75, 143, 0.35);
+    border-radius: 36px 40px 34px 42px / 40px 34px 42px 36px;
+  }
+
+  .screen { scrollbar-width: thin; scrollbar-color: rgba(58, 54, 48, 0.25) transparent; }
+
+  body::after {
+    content: '폰을 엎어두면, 퐁당';
+    font-family: var(--font-hand);
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
 }
 
 /* ── 화면 공통 ── */

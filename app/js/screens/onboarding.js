@@ -4,7 +4,7 @@
 // ═══════════════════════════════════════════════════════════════
 
 import { COPY, AQUARIUM_VARIANTS, timebandOf, src } from '../assets-data.js';
-import { $, el, holdToStart, showScreen } from '../ui.js';
+import { $, el, showScreen } from '../ui.js';
 import { startSession } from '../session.js';
 
 const BROWSE_LABEL = '물 구경 먼저 할래';
@@ -15,15 +15,16 @@ export function renderOnboarding() {
 
   const variant = AQUARIUM_VARIANTS[timebandOf()];
 
-  const btn = el('button', { type: 'button', class: 'onboarding__btn', 'aria-label': '5분만 엎어볼래? — 2초 꾹 누르면 시작' },
-    '5분만 엎어볼래?',
-    el('span', { class: 'onboarding__btn-sub' }, '2초 꾹'),
-  );
-  holdToStart(btn, () => {
-    // 온보딩 전용 5분 미니 세션 (티어 예외 → 웰컴 물고기)
-    startSession({ goalMin: 5, mode: 'solo', onboarding: true });
-    showScreen('session');
-  });
+  const btn = el('button', {
+    type: 'button',
+    class: 'onboarding__btn',
+    'aria-label': '5분만 엎어볼래?',
+    onclick: () => {
+      // 온보딩 전용 5분 미니 세션 (티어 예외 → 웰컴 물고기)
+      startSession({ goalMin: 5, mode: 'solo', onboarding: true });
+      showScreen('session');
+    },
+  }, '5분만 엎어볼래?');
 
   // 온보딩 건너뛰고 둘러보기 — 일반 클릭 (홀드 없음)
   const browseBtn = el('button', {

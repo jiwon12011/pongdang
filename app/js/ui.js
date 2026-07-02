@@ -119,50 +119,6 @@ export function confirmModal(message, { okLabel = '응', cancelLabel = '아니' 
   });
 }
 
-// ── 2초 꾹 시작 제스처: 누른 자리 파문 + 게이지, 완료 시 콜백 ──
-// 포인터와 키보드(Enter/Space 꾹) 둘 다 지원
-export function holdToStart(button, onComplete, holdMs = 2000) {
-  let timer = null;
-  let ripple = null;
-
-  const begin = (x, y) => {
-    if (timer) return;
-    button.classList.add('hold--charging');
-    // 누른 좌표에서 파문 시작
-    const rect = button.getBoundingClientRect();
-    ripple = el('span', { class: 'hold-ripple', 'aria-hidden': 'true' });
-    ripple.style.left = `${(x ?? rect.width / 2 + rect.left) - rect.left}px`;
-    ripple.style.top = `${(y ?? rect.height / 2 + rect.top) - rect.top}px`;
-    ripple.style.animationDuration = `${holdMs}ms`;
-    button.append(ripple);
-    timer = setTimeout(() => {
-      cancel();
-      navigator.vibrate?.(30);
-      onComplete();
-    }, reducedMotion() ? 600 : holdMs); // 모션 축소 환경에선 짧게
-  };
-  const cancel = () => {
-    clearTimeout(timer);
-    timer = null;
-    ripple?.remove();
-    ripple = null;
-    button.classList.remove('hold--charging');
-  };
-
-  button.addEventListener('pointerdown', (e) => {
-    try { button.setPointerCapture?.(e.pointerId); } catch { /* 비활성 포인터는 무시 */ }
-    begin(e.clientX, e.clientY);
-  });
-  ['pointerup', 'pointercancel', 'pointerleave'].forEach((ev) =>
-    button.addEventListener(ev, cancel)
-  );
-  button.addEventListener('keydown', (e) => {
-    if ((e.key === 'Enter' || e.key === ' ') && !e.repeat) { e.preventDefault(); begin(); }
-  });
-  button.addEventListener('keyup', cancel);
-  button.addEventListener('blur', cancel);
-}
-
 // ── "젖은 화면" 연출: 물방울이 흘러내리며 1.5초에 걸쳐 밝아짐 ──
 export function playWetScreen(onDone) {
   const overlay = $('#wet-overlay');
@@ -180,6 +136,12 @@ export function withMono(text) {
   return String(text).split(/(\d[\d:.]*)/).map((part) =>
     /^\d/.test(part) ? el('span', { class: 'mono' }, part) : part
   );
+}
+
+// 끝글자 받침 유무로 '이랑'/'랑' 선택 — 한글 음절이 아니면 '랑' (designer 확정 규칙)
+export function rangJosa(name) {
+  const code = name.charCodeAt(name.length - 1) - 0xAC00;
+  return code >= 0 && code < 11172 && code % 28 > 0 ? '이랑' : '랑';
 }
 
 export function fmtMin(min) {
