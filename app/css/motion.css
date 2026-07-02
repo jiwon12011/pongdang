@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════════════════════
+   motion.css — 모든 애니메이션 (transform/opacity만)
+   prefers-reduced-motion이면 유영 정지·전환은 페이드로 전체 분기
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 꾹 시작 파문 ── */
+@keyframes ripple-grow {
+  from { transform: scale(1); opacity: 0.9; }
+  to   { transform: scale(30); opacity: 0.35; }
+}
+
+/* ── 물고기 유영: 래퍼=좌우 왕복, 안쪽 flip 레이어=방향 전환 ──
+   (반전을 래퍼에 걸면 이동분까지 거울에 비쳐 위치가 점프한다) */
+@keyframes swim-x {
+  0%   { transform: translateX(var(--sx, 5%)); }
+  46%  { transform: translateX(var(--ex, 70%)); }
+  50%  { transform: translateX(var(--ex, 70%)); }
+  96%  { transform: translateX(var(--sx, 5%)); }
+  100% { transform: translateX(var(--sx, 5%)); }
+}
+/* 턴 구간(46→50%)에 scaleX가 0을 지나며 얇아졌다 뒤집힘 — 몸 돌리는 연출 */
+@keyframes flip-x {
+  0%, 46%  { transform: scaleX(1); }
+  50%, 96% { transform: scaleX(-1); }
+  100%     { transform: scaleX(1); }
+}
+/* 둥실둥실 상하 */
+@keyframes bob {
+  from { transform: translateY(-4px) rotate(-2deg); }
+  to   { transform: translateY(4px) rotate(2deg); }
+}
+
+/* ── 세션 숨쉬기 원 ── */
+@keyframes breath {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%      { transform: scale(1.18); opacity: 1; }
+}
+.session__breath { animation: breath 5s ease-in-out infinite; }
+/* 세션 2분 뒤엔 숨쉬기도 재운다 — 무한 애니 GPU 비용 절감 (JS가 클래스 부여) */
+.session__breath--rest { animation-play-state: paused; }
+
+/* ── 홈↔어항 "물에 잠기는" 전환 오버레이 ── */
+.dive-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(168, 216, 234, 0.85) 0%,
+    rgba(138, 198, 209, 0.95) 40%,
+    rgba(60, 110, 130, 0.98) 100%);
+  transform: translateY(101%);
+  visibility: hidden; /* 물결(::before)이 화면 밖에서 삐져 보이지 않게 */
+}
+.dive-overlay--rise, .dive-overlay--fall { visibility: visible; }
+/* 물결 윗선 */
+.dive-overlay::before {
+  content: '';
+  position: absolute;
+  top: -28px; left: -10%;
+  width: 120%; height: 30px;
+  background: radial-gradient(ellipse 30px 14px at 15px 16px, rgba(168, 216, 234, 0.85) 60%, transparent 62%);
+  background-size: 46px 30px;
+  background-repeat: repeat-x;
+}
+.dive-overlay--rise { transition: transform 0.5s ease-in; transform: translateY(0); }
+.dive-overlay--fall { transition: transform 0.55s ease-out; transform: translateY(-101%); }
+
+/* ── 세션 종료 "젖은 화면": 물방울 흘러내리며 1.5초에 걸쳐 밝아짐 ── */
+.wet-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 55;
+  pointer-events: none;
+  background: var(--night-deep);
+  opacity: 0;
+  visibility: hidden;
+}
+.wet-overlay--play {
+  visibility: visible;
+  animation: wet-brighten 1.5s ease-out forwards;
+}
+@keyframes wet-brighten {
+  0%   { opacity: 1; }
+  55%  { opacity: 0.75; }
+  100% { opacity: 0; }
+}
+.wet-overlay__drop {
+  position: absolute;
+  top: -8%;
+  width: 10px; height: 22px;
+  border-radius: 50% 50% 60% 60% / 40% 40% 62% 62%;
+  background: rgba(168, 216, 234, 0.55);
+  opacity: 0;
+}
+.wet-overlay--play .wet-overlay__drop { animation: drop-slide 1.3s ease-in forwards; }
+.wet-overlay__drop--1 { left: 22%; animation-delay: 0.05s !important; }
+.wet-overlay__drop--2 { left: 55%; height: 30px; animation-delay: 0.18s !important; }
+.wet-overlay__drop--3 { left: 78%; animation-delay: 0.3s !important; }
+@keyframes drop-slide {
+  0%   { transform: translateY(0) scaleY(0.7); opacity: 0.9; }
+  100% { transform: translateY(110vh) scaleY(1.3); opacity: 0; }
+}
+
+/* ── 영수증 인쇄 연출 ── */
+.receipt__paper--print {
+  animation: print-out 1.1s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+@keyframes print-out {
+  from { transform: translateY(-102%); }
+  to   { transform: translateY(0); }
+}
+
+/* ── 웰컴/획득 물고기 퐁당 낙하 ── */
+@keyframes plop-in {
+  0%   { transform: translateY(-60px) scale(0.6) rotate(-14deg); opacity: 0; }
+  60%  { transform: translateY(6px) scale(1.06) rotate(4deg); opacity: 1; }
+  100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+}
+.plop-in { animation: plop-in 0.8s cubic-bezier(0.3, 1.3, 0.5, 1) both; }
+
+/* 기포 (빈 어항 등) */
+@keyframes bubble-rise {
+  from { transform: translateY(0) scale(1); opacity: 0.7; }
+  to   { transform: translateY(-90px) scale(1.25); opacity: 0; }
+}
+.bubble-anim { animation: bubble-rise 3.4s ease-in infinite; }
+
+/* ═══ prefers-reduced-motion: 전체 분기 ═══ */
+@media (prefers-reduced-motion: reduce) {
+  .swim-fish,
+  .swim-fish__flip,
+  .swim-fish img,
+  .session__breath,
+  .bubble-anim { animation: none !important; }
+  /* 유영 대신 제자리 배치: JS가 준 시작 위치에 정지 */
+  .swim-fish { transform: translateX(var(--sx, 5%)); }
+
+  .dive-overlay { display: none; }
+  .wet-overlay--play { animation-duration: 0.3s; }
+  .wet-overlay__drop { display: none; }
+  .receipt__paper--print { animation: none; }
+  .plop-in { animation: plop-fade 0.3s ease both; }
+  .hold-ripple { animation-name: ripple-fade; }
+
+  .screen, .toast, .modal, .tabbar, .aquarium__ui, .aquarium__dots {
+    transition-duration: 0.15s !important;
+  }
+}
+@keyframes plop-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ripple-fade { from { opacity: 0.4; } to { opacity: 0.8; } }

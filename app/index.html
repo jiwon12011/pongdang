@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FFF8F0" />
+  <title>퐁당 — 디지털 디톡스 어항</title>
+  <meta name="description" content="폰을 엎어두면 어항에 물고기가 모이는 디지털 디톡스 게임, 퐁당." />
+
+  <!-- 타이포: 제목=Gaegu(손글씨) / 본문=Pretendard / 숫자=IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin /> <!-- Pretendard CSS 렌더 블로킹 완화 -->
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/screens.css" />
+  <link rel="stylesheet" href="./css/motion.css" />
+</head>
+<body>
+  <div id="app" class="app">
+
+    <!-- ═══ 온보딩: 설명 없이 첫 퐁당 (설계서 ②) ═══ -->
+    <section class="screen" data-screen="onboarding" hidden aria-label="온보딩"></section>
+
+    <!-- ═══ 홈 (수면 위) ═══ -->
+    <section class="screen" data-screen="home" hidden aria-label="홈"></section>
+
+    <!-- ═══ 도감 ═══ -->
+    <section class="screen" data-screen="collection" hidden aria-label="도감"></section>
+
+    <!-- ═══ 어항 (물속) ═══ -->
+    <section class="screen" data-screen="aquarium" hidden aria-label="어항"></section>
+
+    <!-- ═══ 설정 ═══ -->
+    <section class="screen" data-screen="settings" hidden aria-label="설정"></section>
+
+    <!-- ═══ 세션 (잠수 중) — 탭 밖 풀스크린 ═══ -->
+    <section class="screen screen--full" data-screen="session" hidden aria-label="잠수 중"></section>
+
+    <!-- ═══ 영수증 — 탭 밖 풀스크린 ═══ -->
+    <section class="screen screen--full" data-screen="receipt" hidden aria-label="영수증"></section>
+
+    <!-- 탭바: 홈 · 도감 · 어항 · 설정 -->
+    <nav class="tabbar" id="tabbar" aria-label="주 메뉴" hidden>
+      <button type="button" class="tabbar__btn" data-tab="home">
+        <img src="./assets/icons/icon_individual_home.webp" alt="" width="26" height="26" />
+        <span>홈</span>
+      </button>
+      <button type="button" class="tabbar__btn" data-tab="collection">
+        <img src="./assets/icons/icon_catalogue.webp" alt="" width="26" height="26" />
+        <span>도감</span>
+      </button>
+      <button type="button" class="tabbar__btn" data-tab="aquarium">
+        <img src="./assets/icons/icon_individual_aquarium.webp" alt="" width="26" height="26" />
+        <span>어항</span>
+      </button>
+      <button type="button" class="tabbar__btn" data-tab="settings">
+        <img src="./assets/icons/icon_final_013_settings.webp" alt="" width="26" height="26" />
+        <span>설정</span>
+      </button>
+    </nav>
+
+    <!-- 홈↔어항 "물에 잠기는" 전환 오버레이 -->
+    <div class="dive-overlay" id="dive-overlay" aria-hidden="true"></div>
+
+    <!-- 세션 종료 "젖은 화면" 오버레이 -->
+    <div class="wet-overlay" id="wet-overlay" aria-hidden="true">
+      <span class="wet-overlay__drop wet-overlay__drop--1"></span>
+      <span class="wet-overlay__drop wet-overlay__drop--2"></span>
+      <span class="wet-overlay__drop wet-overlay__drop--3"></span>
+    </div>
+
+    <!-- 토스트 / 모달 자리 -->
+    <div class="toast-zone" id="toast-zone" aria-live="polite"></div>
+    <div class="modal-zone" id="modal-zone"></div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

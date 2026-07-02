@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════════════════════════
+   base.css — 팔레트·타이포·3층 분리(손그림/글래스/디지털)·공통 UI
+   스타일 바이블(#0): 크림 종이 + 노이즈, 순백·형광 금지, 뭉툭·귀엽게
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* 팔레트 (콘셉트 ⑩) */
+  --cream: #FFF8F0;
+  --cream-2: #FAF6F1;
+  --cream-3: #F5E6D3;
+  --water: #A8D8EA;
+  --pink: #FFB6C1;
+  --gold: #FFD700;
+  --teal: #8AC6D1;
+  --coral: #FF8A65;
+  --night: #1A1F3A;
+  --night-deep: #0D1628;
+
+  /* 디지털층 텍스트 — 파스텔 직접 X, 대비 확보 */
+  --ink: #3A3630;
+  --ink-soft: #6D675E;
+  --ink-faint: #9A938A;
+
+  /* 타이포 */
+  --font-hand: 'Gaegu', 'Comic Sans MS', cursive;
+  --font-body: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* 손그림 톤: 들쭉날쭉 모서리 */
+  --wobble-sm: 12px 14px 11px 15px / 14px 11px 15px 12px;
+  --wobble-md: 18px 22px 16px 24px / 22px 16px 24px 18px;
+  --wobble-lg: 26px 32px 24px 34px / 30px 24px 34px 26px;
+
+  --tabbar-h: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { height: 100%; }
+body {
+  height: 100%;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden; /* 화면 단위 스크롤은 각 screen 내부에서 */
+  touch-action: manipulation;
+}
+
+/* 은은한 종이 노이즈 — 크림 종이 질감 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; } /* display:flex 클래스가 hidden 속성을 이기지 못하게 */
+button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+input { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ── 앱 프레임: 모바일 퍼스트, 데스크톱에선 폰 폭으로 중앙 정렬 ── */
+.app {
+  position: relative;
+  height: 100dvh;
+  max-width: 520px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ── 화면 공통 ── */
+.screen {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 16px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: var(--cream);
+}
+.screen--in { opacity: 1; }
+.screen--full { padding-bottom: 0; z-index: 30; }
+
+/* ── 3층 분리 2층: 글래스 카드 (반투명 + 대비 틴트 + 보더) ── */
+.glass-card {
+  background: rgba(255, 252, 246, 0.62);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: var(--wobble-md);
+  box-shadow: 0 6px 22px rgba(120, 100, 80, 0.10);
+}
+/* 종이 카드 (모달 등 — 블러 없이 확실한 가독) */
+.paper-card {
+  background: var(--cream-2);
+  border: 2px solid rgba(58, 54, 48, 0.12);
+  border-radius: var(--wobble-md);
+  box-shadow: 0 10px 30px rgba(60, 50, 40, 0.18);
+}
+
+/* ── 3층 분리 3층: 디지털 버튼 (명확·뭉툭·귀엽게) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 22px;
+  border-radius: var(--wobble-sm);
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:active { transform: scale(0.96); }
+.btn--primary {
+  background: var(--teal);
+  color: #1F4E58; /* teal 위 흰색은 1.9:1 실패 — 짙은 잉크로 대비 확보 */
+  box-shadow: 0 4px 0 rgba(90, 140, 150, 0.55);
+}
+.btn--soft {
+  background: rgba(168, 216, 234, 0.35);
+  color: var(--ink);
+  border: 2px solid rgba(138, 198, 209, 0.5);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 2px dashed rgba(58, 54, 48, 0.25);
+}
+
+/* 손글씨 제목 */
+.hand-title {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+.mono { font-family: var(--font-mono); }
+
+/* ── 탭바 ── */
+.tabbar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(var(--safe-bottom) + 10px);
+  height: var(--tabbar-h);
+  z-index: 20;
+  display: flex;
+  background: rgba(255, 252, 246, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--wobble-lg);
+  box-shadow: 0 8px 24px rgba(120, 100, 80, 0.16);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.tabbar__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-soft); /* ink-faint는 2.9:1 — 기능 라벨엔 안 씀 */
+  border-radius: var(--wobble-sm);
+}
+.tabbar__btn img { opacity: 0.45; filter: grayscale(0.6); transition: opacity 0.2s, filter 0.2s, transform 0.2s; }
+.tabbar__btn--active { color: var(--ink); }
+.tabbar__btn--active img { opacity: 1; filter: none; transform: translateY(-2px); }
+
+/* ── 토스트 ── */
+.toast-zone {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 24px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+.toast {
+  max-width: 86%;
+  padding: 10px 18px;
+  background: rgba(26, 31, 58, 0.88);
+  color: #FDF9F3;
+  font-size: 14px;
+  border-radius: var(--wobble-sm);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.toast--in { opacity: 1; transform: translateY(0); }
+
+/* ── 모달 ── */
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(26, 31, 58, 0.35);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.modal--in { opacity: 1; }
+.modal__card { width: min(340px, 100%); padding: 24px 20px 20px; text-align: center; }
+.modal__msg { font-size: 15px; line-height: 1.55; margin-bottom: 20px; white-space: pre-line; }
+.modal__btns { display: flex; gap: 10px; justify-content: center; }
+.modal__btns .btn { flex: 1; }
+
+/* ── 필터 칩 ── */
+.chip-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+  scrollbar-width: none;
+}
+.chip-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(58, 54, 48, 0.12);
+  border-radius: var(--wobble-sm);
+}
+.chip--on {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #1F4E58; /* btn--primary와 동일한 대비 처리 */
+}
+
+/* 희귀도 뱃지 */
+.rarity-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: var(--wobble-sm);
+  color: var(--ink);
+  background: var(--rb, var(--water));
+}
+.rarity-badge--legendary { box-shadow: 0 0 12px rgba(255, 215, 0, 0.6); }
+
+/* 스크린리더 전용 */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

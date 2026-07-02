@@ -1,0 +1,650 @@
+/* ═══════════════════════════════════════════════════════════════
+   screens.css — 화면별 스타일 (홈·온보딩·세션·영수증·어항·도감·설정)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─────────────── 홈 (수면 위) ─────────────── */
+.home {
+  position: relative;
+  min-height: 100%;
+  padding: max(24px, env(safe-area-inset-top)) 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background:
+    linear-gradient(180deg, rgba(168, 216, 234, 0.16) 0%, rgba(255, 248, 240, 0) 45%);
+}
+.home__head { position: relative; padding-top: 8px; }
+.home__logo { font-size: 44px; line-height: 1; }
+.home__sub { margin-top: 4px; color: var(--ink-soft); font-size: 14px; }
+.home__decor {
+  position: absolute;
+  width: 44px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.home__decor--star { top: -2px; right: 10px; transform: rotate(12deg); }
+.home__decor--shell { top: 42px; right: 62px; width: 30px; transform: rotate(-10deg); opacity: .7; }
+
+.home__summary {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.home__summary-item { flex: 1; }
+.home__summary-label { font-size: 12px; color: var(--ink-soft); }
+/* 숫자만 .mono — 한글 단위는 body 폰트 유지 */
+.home__summary-value { font-size: 22px; font-weight: 700; }
+.home__summary-divider { width: 2px; height: 34px; background: rgba(58, 54, 48, 0.1); border-radius: 2px; }
+
+/* 모드 선택: 혼자 / 같이 */
+.home__modes { display: flex; gap: 10px; }
+.home__mode {
+  flex: 1;
+  padding: 12px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(58, 54, 48, 0.1);
+  border-radius: var(--wobble-sm);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.home__mode--on {
+  background: rgba(168, 216, 234, 0.4);
+  border-color: var(--teal);
+  color: var(--ink);
+}
+
+/* 목표시간 */
+.home__goal-label { font-family: var(--font-hand); font-size: 19px; }
+.home__goals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.goal-chip {
+  padding: 12px 4px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(58, 54, 48, 0.1);
+  border-radius: var(--wobble-sm);
+  color: var(--ink-soft);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.goal-chip--on {
+  background: var(--pink);
+  border-color: rgba(230, 140, 155, 0.8);
+  color: #5C3A42;
+  transform: scale(1.04);
+}
+.goal-chip__tier { display: block; font-family: var(--font-hand); font-size: 14px; margin-top: 2px; } /* 손글씨는 12px에서 뭉개짐 */
+
+/* 2초 꾹 시작 버튼 — 수면. 파문이 여기서 인다 */
+.home__start {
+  position: relative;
+  overflow: hidden;
+  margin: 8px 0;
+  min-height: 118px;
+  border-radius: var(--wobble-lg);
+  background: linear-gradient(175deg, var(--water) 0%, var(--teal) 100%);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 26px rgba(138, 198, 209, 0.45), inset 0 -14px 24px rgba(255, 255, 255, 0.28);
+  color: #23555F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  transition: transform 0.3s ease;
+}
+.home__start-main { font-family: var(--font-hand); font-size: 30px; font-weight: 700; }
+.home__start-sub { font-size: 13px; font-weight: 600; }
+.hold--charging { transform: scale(0.975); }
+
+/* 누른 자리 파문: hold 시간 동안 퍼진다 */
+.hold-ripple {
+  position: absolute;
+  width: 20px; height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  animation: ripple-grow linear forwards;
+}
+
+/* 같이 퐁당 — 방 코드 카드 */
+.room-card { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.room-card__code {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-align: center;
+  padding: 10px 0 10px 0.35em; /* letter-spacing 시각 보정 */
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px dashed rgba(58, 54, 48, 0.2);
+  border-radius: var(--wobble-sm);
+}
+.room-card__note { font-size: 13px; color: var(--ink-soft); text-align: center; }
+.room-card__members { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.room-card__member { display: flex; align-items: center; gap: 8px; }
+.room-card__member img { width: 26px; height: 26px; object-fit: contain; }
+
+/* ─────────────── 온보딩 ─────────────── */
+.onboarding {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px 24px calc(32px + var(--safe-bottom));
+  text-align: center;
+}
+.onboarding__tank {
+  position: relative;
+  width: min(78vw, 330px);
+  aspect-ratio: 1 / 1;
+}
+.onboarding__tank img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.onboarding__copy { font-family: var(--font-hand); font-size: 22px; line-height: 1.5; color: var(--ink); }
+.onboarding__hint { font-size: 14px; color: var(--ink-soft); }
+.onboarding__btn {
+  position: relative;
+  overflow: hidden;
+  min-height: 76px;
+  padding: 14px 42px;
+  border-radius: var(--wobble-lg);
+  background: linear-gradient(175deg, var(--pink), var(--coral));
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 22px rgba(255, 138, 101, 0.4);
+  color: #6B3226;
+  font-family: var(--font-hand);
+  font-size: 24px;
+  font-weight: 700;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.onboarding__btn-sub { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 600; opacity: 0.8; }
+
+/* ─────────────── 세션 (잠수 중) — 초저휘도 ─────────────── */
+.session {
+  background: var(--night-deep);
+  color: rgba(220, 228, 245, 0.58); /* 초저휘도 유지하되 읽히는 최소 대비 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* 아주 흐린 물결 */
+.session__waves {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 8%, rgba(168, 216, 234, 0.05), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 110%, rgba(26, 31, 58, 0.9), transparent 70%);
+  pointer-events: none;
+}
+.session__breath {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  border: 2px solid rgba(168, 216, 234, 0.14);
+  margin-bottom: 26px;
+}
+.session__hint {
+  font-size: 15px;
+  line-height: 1.6;
+  transition: opacity 1.2s ease;
+  white-space: pre-line;
+}
+.session__hint--faded { opacity: 0; }
+.session__time {
+  position: absolute;
+  bottom: 22%;
+  font-family: var(--font-mono);
+  font-size: 30px;
+  color: rgba(200, 214, 240, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.session__time--show { opacity: 1; }
+.session__sulk {
+  position: absolute;
+  top: 20%;
+  left: 0; right: 0;
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: rgba(255, 182, 193, 0.75);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.session__sulk--show { opacity: 1; }
+/* 바위 뒤로 숨는 꼬마 물고기 */
+.session__fish {
+  position: absolute;
+  bottom: 12%;
+  left: 46%;
+  width: 54px;
+  opacity: 0.35;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+.session__fish--hide { transform: translateX(120px) translateY(30px) scale(0.5); opacity: 0; }
+.session__quit {
+  position: absolute;
+  bottom: calc(28px + var(--safe-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 22px;
+  font-size: 14px;
+  color: rgba(200, 214, 240, 0.6);
+  border: 1.5px dashed rgba(200, 214, 240, 0.2);
+  border-radius: var(--wobble-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.session__quit--show { opacity: 1; pointer-events: auto; }
+.session__goal-note {
+  position: absolute;
+  top: calc(20px + env(safe-area-inset-top));
+  left: 0; right: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(200, 214, 240, 0.5);
+}
+
+/* ─────────────── 영수증 ─────────────── */
+.receipt {
+  background: linear-gradient(180deg, #2A3153 0%, var(--night) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+}
+/* 개봉 전 커버 */
+.receipt__cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: rgba(230, 236, 250, 0.85);
+  text-align: center;
+  cursor: pointer;
+  padding: 40px;
+  -webkit-tap-highlight-color: transparent;
+}
+.receipt__cover-icon { width: 72px; opacity: 0.9; }
+.receipt__cover-copy { font-family: var(--font-hand); font-size: 24px; }
+.receipt__cover-tap { font-size: 13px; opacity: 0.55; }
+
+/* 인쇄되는 영수증 종이 */
+.receipt__paper-clip {
+  width: min(100%, 380px);
+  max-height: calc(100dvh - 40px);
+  overflow: hidden;
+  border-radius: 6px;
+}
+.receipt__paper {
+  position: relative;
+  background: #FDFAF4;
+  padding: 28px 24px 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  overflow-y: auto;
+  max-height: calc(100dvh - 40px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+}
+/* 손그림 프레임을 종이 위에 깐다.
+   원본(640²)의 그림 영역이 가로 25~75%·세로 6~94%라 그만큼 바깥으로 당겨 종이에 맞춤 */
+.receipt__frame {
+  position: absolute;
+  top: -7%;
+  left: -50%;
+  width: 200%;   /* img는 auto가 intrinsic 크기라 명시적으로 늘린다 */
+  height: 114%;
+  max-width: none;
+  object-fit: fill;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.receipt__inner { position: relative; display: flex; flex-direction: column; gap: 10px; }
+.receipt__inner > *:not(.receipt__frame) { position: relative; } /* 내용이 프레임 위에 오도록 */
+.receipt__shop { text-align: center; font-weight: 700; letter-spacing: 0.2em; font-size: 15px; }
+.receipt__addr { text-align: center; font-size: 11px; color: var(--ink-faint); } /* 장식 텍스트 — faint 허용 */
+.receipt__rule { border: none; border-top: 2px dashed rgba(58, 54, 48, 0.25); margin: 4px 0; }
+.receipt__row { display: flex; justify-content: space-between; gap: 10px; }
+.receipt__row dt { color: var(--ink-soft); }
+.receipt__row dd { font-weight: 600; }
+.receipt__section-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+/* 세션 이름 짓기 — 점선 빈칸 */
+.receipt__name-row { text-align: center; }
+.receipt__name-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px dashed rgba(58, 54, 48, 0.35);
+  background: transparent;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 22px;
+  padding: 4px 8px;
+  color: var(--ink);
+}
+.receipt__name-input::placeholder { color: var(--ink-faint); }
+.receipt__name-ask { font-size: 11px; color: var(--ink-soft); margin-top: 4px; }
+/* CATCH OF THE DAY */
+.receipt__catch {
+  position: relative;
+  align-self: center;
+  width: 172px;
+  padding: 18px;
+}
+.receipt__catch-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; }
+.receipt__catch-fish { position: relative; width: 100%; aspect-ratio: 1/1; object-fit: contain; }
+.receipt__catch-name { text-align: center; font-family: var(--font-hand); font-size: 19px; margin-top: 2px; }
+.receipt__catch-rarity { text-align: center; margin-top: 2px; }
+/* 물고기 스탬프들 */
+.receipt__stamps { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
+.receipt__stamp { width: 44px; height: 44px; object-fit: contain; }
+/* 오늘의 한 줄 */
+.receipt__line {
+  font-family: var(--font-hand);
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.55;
+  color: var(--ink);
+  padding: 2px 6px;
+}
+.receipt__hint-box {
+  border: 1.5px dashed rgba(58, 54, 48, 0.3);
+  border-radius: var(--wobble-sm);
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.receipt__hint-box strong { display: block; font-size: 11px; letter-spacing: 0.2em; color: var(--ink-soft); margin-bottom: 4px; }
+.receipt__barcode {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: -1px;
+  color: var(--ink);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.receipt__stamp-mark {
+  align-self: center;
+  font-family: var(--font-hand);
+  font-size: 14px;
+  color: var(--coral);
+  border: 2px solid var(--coral);
+  border-radius: var(--wobble-sm);
+  padding: 4px 12px;
+  transform: rotate(-6deg);
+}
+.receipt__btns { display: flex; gap: 8px; margin-top: 8px; }
+.receipt__btns .btn { flex: 1; font-family: var(--font-body); font-size: 14px; min-height: 44px; }
+
+/* ─────────────── 어항 (물속) ─────────────── */
+.aquarium {
+  padding-bottom: 0;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.aquarium__stage { position: absolute; inset: 0; }
+.aquarium__bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.aquarium__tank-back, .aquarium__tank-front {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: min(96%, 470px);
+  height: 82%;
+  transform: translate(-50%, -52%);
+  object-fit: contain;
+  pointer-events: none;
+}
+.aquarium__fish-layer {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: min(84%, 400px);
+  height: 62%;
+  transform: translate(-50%, -52%);
+  pointer-events: none;
+}
+/* 유영 물고기: 래퍼=좌우 왕복 / flip=방향 전환 / img=둥실 (3중 분리) */
+.swim-fish {
+  position: absolute;
+  top: var(--ty, 40%);
+  left: 0;
+  width: 100%;
+  animation: swim-x var(--dur, 14s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+.swim-fish__flip {
+  display: block;
+  width: fit-content;
+  animation: flip-x var(--dur, 14s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+.swim-fish img {
+  width: calc(52px * var(--scale, 1));
+  height: calc(52px * var(--scale, 1));
+  object-fit: contain;
+  animation: bob var(--bob, 3.2s) ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 6px rgba(26, 31, 58, 0.15));
+}
+
+/* 어항 UI (글래스 헤더) — 물멍 때 가라앉는다 */
+.aquarium__ui {
+  position: absolute;
+  top: calc(12px + env(safe-area-inset-top));
+  left: 12px; right: 12px; /* 플로팅 요소 거터 12px 통일 (탭바와 동일) */
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  visibility: visible;
+  transition: opacity 1.2s ease, transform 1.2s ease, visibility 0s;
+}
+.aquarium__title { flex: 1; min-width: 0; }
+.aquarium__name { font-family: var(--font-hand); font-size: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.aquarium__meta { font-size: 12px; color: var(--ink-soft); } /* 숫자만 .mono span으로 */
+.aquarium__nav { display: flex; gap: 4px; }
+.aquarium__nav button {
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--wobble-sm);
+}
+.aquarium__nav button:disabled { opacity: 0.3; cursor: default; }
+.aquarium__dots {
+  position: absolute;
+  bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 26px);
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 5;
+  visibility: visible;
+  transition: opacity 1.2s ease, visibility 0s;
+}
+.aquarium__dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(58, 54, 48, 0.25); }
+.aquarium__dot--on { background: var(--ink-soft); }
+.aquarium--night .aquarium__dot { background: rgba(253, 249, 243, 0.3); }
+.aquarium--night .aquarium__dot--on { background: rgba(253, 249, 243, 0.85); }
+
+/* 물멍 모드: UI 전부 가라앉음.
+   opacity:0만으론 backdrop-filter 비용이 남아서, 페이드가 끝난 뒤 visibility로 완전히 끈다 */
+.app--mulmeong .aquarium__ui,
+.app--mulmeong .aquarium__dots {
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 1.2s ease, transform 1.2s ease, visibility 0s 1.2s;
+}
+.app--mulmeong .tabbar {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
+}
+
+/* 빈 어항 */
+.aquarium__empty {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 78%;
+  text-align: center;
+  z-index: 4;
+  pointer-events: none;
+}
+.aquarium__empty img { width: 44px; margin: 0 auto 10px; }
+/* 카피가 손그림 위에 직접 얹히지 않게 미니 글래스로 감싼다 (3층 분리) */
+.aquarium__empty p {
+  font-family: var(--font-hand);
+  font-size: 19px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  background: rgba(255, 252, 246, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: var(--wobble-md);
+  padding: 14px 18px;
+}
+
+/* ─────────────── 도감 ─────────────── */
+.dex {
+  padding: max(24px, env(safe-area-inset-top)) 20px 0; /* 콘텐츠 거터 20px 통일 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100%;
+}
+.dex__head { display: flex; align-items: baseline; gap: 10px; }
+.dex__title { font-size: 30px; }
+.dex__count { font-family: var(--font-mono); font-size: 14px; color: var(--ink-soft); }
+.dex__empty-note {
+  font-family: var(--font-hand);
+  font-size: 17px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 8px 0 2px;
+}
+.dex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.dex-cell {
+  padding: 12px 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.62);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: var(--wobble-md);
+  box-shadow: 0 4px 14px rgba(120, 100, 80, 0.08);
+  transition: transform 0.15s ease;
+}
+.dex-cell:active { transform: scale(0.95); }
+.dex-cell img { width: 62px; height: 62px; object-fit: contain; }
+.dex-cell__name {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 100%;
+  white-space: nowrap; /* 1줄 고정 — 긴 이름은 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 미획득 = 연필 스케치 근사 */
+.dex-cell--unknown img { filter: grayscale(1) contrast(0.65) brightness(1.08); opacity: 0.38; }
+.dex-cell--unknown .dex-cell__name { color: var(--ink-soft); }
+
+/* 도감 상세 카드 (모달 안) */
+.dex-detail { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 6px 0; }
+.dex-detail img { width: 110px; height: 110px; object-fit: contain; }
+.dex-detail__name { font-family: var(--font-hand); font-size: 24px; }
+.dex-detail__rows { width: 100%; font-size: 13px; display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
+.dex-detail__rows .receipt__row dt { font-family: var(--font-mono); font-size: 12px; }
+.dex-detail__diary {
+  width: 100%;
+  font-family: var(--font-hand);
+  font-size: 15px;
+  color: var(--ink-soft);
+  border-top: 2px dashed rgba(58, 54, 48, 0.18);
+  padding-top: 8px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* ─────────────── 설정 ─────────────── */
+.settings {
+  padding: max(24px, env(safe-area-inset-top)) 20px 0; /* 콘텐츠 거터 20px 통일 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100%;
+}
+.settings__title { font-size: 30px; }
+.settings__card { padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+.settings__label { font-weight: 700; font-size: 14px; }
+.settings__desc { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.settings__input {
+  padding: 12px 16px;
+  border: 2px solid rgba(58, 54, 48, 0.15);
+  border-radius: var(--wobble-sm);
+  background: rgba(255, 255, 255, 0.7);
+}
+.settings__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* 토글 */
+.toggle { position: relative; width: 52px; height: 30px; flex: 0 0 auto; }
+.toggle input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1; }
+.toggle__track {
+  position: absolute; inset: 0;
+  background: rgba(58, 54, 48, 0.15);
+  border-radius: 99px;
+  transition: background 0.2s;
+}
+.toggle__thumb {
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 24px; height: 24px;
+  background: #FDF9F3; /* 순백 금지 — 크림 톤 */
+  border: 1.5px solid rgba(58, 54, 48, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.toggle input:checked ~ .toggle__track { background: var(--teal); }
+.toggle input:checked ~ .toggle__thumb { transform: translateX(22px); }
+.toggle input:focus-visible ~ .toggle__track { outline: 3px solid var(--teal); outline-offset: 2px; }
+.settings__danger { color: #B4574B; border-color: rgba(180, 87, 75, 0.4); }
+.settings__foot { text-align: center; font-size: 12px; color: var(--ink-faint); padding: 8px 0; }
