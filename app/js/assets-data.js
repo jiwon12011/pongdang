@@ -29,10 +29,10 @@ export const rarityIdx = (r) => RARITY_ORDER.indexOf(r);
 
 // ── 시간대 4구간 (설계서 ⑥: 새벽 04–07 / 낮 07–16:30 / 노을 16:30–19:30 / 밤 19:30–04) ──
 export const TIMEBANDS = {
-  dawn:   { label: '새벽', emojiDecor: 'decor_final_007_spiral_shell' },
-  day:    { label: '낮',   emojiDecor: 'decor_final_009_sun_sticker' },
-  sunset: { label: '노을', emojiDecor: 'decor_final_006_pink_ribbon_bow' },
-  night:  { label: '밤',   emojiDecor: 'decor_final_008_moon_charm' },
+  dawn:   { label: '새벽', emojiDecor: 'decor_final_007_spiral_shell',   homeBg: 'bg_final_008_morning_mint' },
+  day:    { label: '낮',   emojiDecor: 'decor_final_009_sun_sticker',    homeBg: 'bg_final_002_pastel_blue_bubbles' },
+  sunset: { label: '노을', emojiDecor: 'decor_final_006_pink_ribbon_bow', homeBg: 'bg_final_003_sunset_coral_diary' },
+  night:  { label: '밤',   emojiDecor: 'decor_final_008_moon_charm',     homeBg: 'bg_final_004_night_navy_moon' },
 };
 
 // 분 단위(자정 기준)로 시간대 판정
@@ -144,6 +144,8 @@ export const COPY = {
   tooShort: '오늘은 여기까지. 발끝만 담갔다 갔네',
   openReceipt: '젖은 손 닦고 열어봐',
   quitConfirm: '정말 그만둘까? 물고기들은 안 삐져.',
+  freeDiveNote: '자유 잠수 · 원할 때 올라오면 돼',
+  quitConfirmFree: '이제 올라갈래? 오늘 물살은 잘 챙겨둘게.',
   moveOut: '몇 마리는 옛 어항에 놀러 갔어',
   sleepHint: '이제 폰을 재워줘.',
   onboardingHint: '화면은 켜둔 채, 그냥 뒤집어 두면 돼.',

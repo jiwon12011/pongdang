@@ -36,8 +36,12 @@
   50%      { transform: scale(1.18); opacity: 1; }
 }
 .session__breath { animation: breath 5s ease-in-out infinite; }
-/* 세션 2분 뒤엔 숨쉬기도 재운다 — 무한 애니 GPU 비용 절감 (JS가 클래스 부여) */
-.session__breath--rest { animation-play-state: paused; }
+/* 세션 2분 휴면: 숨쉬기·유영·기포 전부 재운다 — 무한 애니 GPU 비용 절감 (JS가 wrap에 클래스 부여) */
+.session--rest .session__breath,
+.session--rest .swim-fish,
+.session--rest .swim-fish__flip,
+.session--rest .swim-fish img,
+.session--rest .bubble-anim { animation-play-state: paused; }
 
 /* ── 홈↔어항 "물에 잠기는" 전환 오버레이 ── */
 .dive-overlay {
@@ -132,9 +136,11 @@
   .swim-fish__flip,
   .swim-fish img,
   .session__breath,
+  .home__bubble,
   .bubble-anim { animation: none !important; }
   /* 유영 대신 제자리 배치: JS가 준 시작 위치에 정지 */
   .swim-fish { transform: translateX(var(--sx, 5%)); }
+  .home__bubble { opacity: 0; } /* 정지한 기포는 얼룩처럼 보여 숨김 */
 
   .dive-overlay { display: none; }
   .wet-overlay--play { animation-duration: 0.3s; }

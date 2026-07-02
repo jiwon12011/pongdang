@@ -7,6 +7,8 @@ import { COPY, AQUARIUM_VARIANTS, timebandOf, src } from '../assets-data.js';
 import { $, el, holdToStart, showScreen } from '../ui.js';
 import { startSession } from '../session.js';
 
+const BROWSE_LABEL = '물 구경 먼저 할래';
+
 export function renderOnboarding() {
   const root = $('[data-screen="onboarding"]');
   root.innerHTML = '';
@@ -23,6 +25,13 @@ export function renderOnboarding() {
     showScreen('session');
   });
 
+  // 온보딩 건너뛰고 둘러보기 — 일반 클릭 (홀드 없음)
+  const browseBtn = el('button', {
+    type: 'button',
+    class: 'onboarding__browse',
+    onclick: () => showScreen('home'),
+  }, BROWSE_LABEL);
+
   root.append(
     el('div', { class: 'onboarding' },
       el('div', { class: 'onboarding__tank', 'aria-hidden': 'true' },
@@ -31,6 +40,7 @@ export function renderOnboarding() {
       ),
       el('p', { class: 'onboarding__copy' }, COPY.emptyAquarium),
       btn,
+      browseBtn,
       el('p', { class: 'onboarding__hint' }, COPY.onboardingHint),
     ),
   );

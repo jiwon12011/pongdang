@@ -54,8 +54,6 @@ function buildPaper({ session, fish, overflowed }) {
   });
 
   const inner = el('div', { class: 'receipt__inner' },
-    // 손그림 프레임 — 스크롤되는 내용 전체를 감싸도록 inner 기준으로 배치
-    el('img', { class: 'receipt__frame', src: src.receipt('receipt_final_001_wobbly_receipt_frame'), alt: '' }),
     el('div', { class: 'receipt__shop' }, 'PONGDANG'),
     el('div', { class: 'receipt__addr' }, '어딘가의 조용한 물속 · 1번 어항'),
     el('div', { class: 'receipt__name-row' },

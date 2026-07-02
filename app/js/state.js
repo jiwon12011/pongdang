@@ -3,9 +3,9 @@
 //   pongdang.profile       { nickname, onboarded, demoSpeed }
 //   pongdang.fish[]        { speciesId, caughtAt, sessionId }
 //   pongdang.sessions[]    { id, name, startedAt, endedAt, durationMin,
-//                            goalMin, timeband, tierName, mode, fishIds[],
-//                            attempt, stamp }
-//   pongdang.activeSession { startedAt, goalMin, mode, timeband, speed, onboarding }
+//                            goalMin(null=자유 잠수), timeband, tierName, mode,
+//                            fishIds[], attempt, stamp }
+//   pongdang.activeSession { startedAt, goalMin(null=자유 잠수), mode, timeband, speed, onboarding }
 // ═══════════════════════════════════════════════════════════════
 
 const KEYS = {
@@ -80,6 +80,16 @@ export function todaySummary() {
     fishCount: sessions.reduce((sum, s) => sum + (s.fishIds?.length || 0), 0),
     sessionCount: sessions.length,
   };
+}
+
+// ── 오늘 만난 물고기 (홈 히어로용): 최신 세션부터 flat, 종 중복 제거, 최대 4마리 ──
+export function todayFishIds(max = 4) {
+  const today = new Date().toDateString();
+  const ids = getSessions()
+    .filter((s) => s.fishIds?.length && new Date(s.startedAt).toDateString() === today)
+    .reverse() // 최신 세션 먼저
+    .flatMap((s) => s.fishIds);
+  return [...new Set(ids)].slice(0, max);
 }
 
 // ── 데모 배속: 실제 경과 ms → 게임상 분 (프로토 전용 ×60) ──
